@@ -236,3 +236,45 @@ document.addEventListener("DOMContentLoaded", function () {
     section.classList.add("visible");
   }
 });
+// Founder Qoute Animations
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all elements to animate
+  const quoteContainer = document.querySelector(".quote-container");
+  const sectionTitle = document.querySelector(".section-title");
+  const quoteImage = document.querySelector(".quote-image img");
+  const quoteText = document.querySelector(".quote-text");
+  const quoteAuthor = document.querySelector(".quote-author");
+
+  // Create intersection observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add animated class to each element with different delays
+          quoteContainer.classList.add("animated");
+          sectionTitle.classList.add("animated");
+          quoteImage.classList.add("animated");
+          quoteText.classList.add("animated");
+          quoteAuthor.classList.add("animated");
+
+          // Unobserve after animation to prevent retriggering
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  ); // Trigger when 10% of element is visible
+
+  // Observe the main container
+  observer.observe(document.querySelector(".founder-quote"));
+
+  // Bonus: Add hover effect to the image
+  quoteImage.addEventListener("mouseenter", () => {
+    quoteImage.style.transform = "scale(1.05)";
+    quoteImage.style.transition = "transform 0.3s ease";
+  });
+
+  quoteImage.addEventListener("mouseleave", () => {
+    quoteImage.style.transform = "scale(1)";
+  });
+});
