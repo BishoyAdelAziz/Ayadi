@@ -1,0 +1,378 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// single service main content
+
+.iOS {
+    .page {
+        background: url("../img/placeholder.jpg") no-repeat center / cover;
+    }
+}
+
+.page {
+    background: url("../img/placeholder.jpg") no-repeat center fixed / cover;
+
+    &_card {
+        padding-top: 120px;
+
+        &-title {
+            max-width: 300px;
+        }
+    }
+}
+
+.content {
+    padding-bottom: 0;
+
+    &_about {
+        margin-bottom: 40px;
+
+        &-media {
+            margin-bottom: 20px;
+
+            &_main, &_thumbs {
+                img {
+                    height: 100%;
+                }
+            }
+
+            &_main {
+                height: 180px;
+                margin-bottom: 10px;
+                position: relative;
+
+                .swiper-wrapper {
+                    pointer-events: none;
+                }
+
+                .swiper-controls {
+                    padding: 10px;
+                }
+            }
+
+            &_thumbs {
+                height: 90px;
+
+                .swiper-slide {
+                    position: relative;
+                    cursor: pointer;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: rgba(0, 0, 142, 0.4);
+                        transition: opacity .4s ease-in-out;
+                        opacity: 0;
+                    }
+
+                    &:hover {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-main {
+
+            &_text {
+                margin-bottom: 15px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            &_group {
+                margin: 20px 0;
+
+                .block {
+                    margin-bottom: 20px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    &:nth-of-type(odd) {
+                        .icon {
+                            color: $theme1;
+                        }
+                    }
+
+                    &:nth-of-type(even) {
+                        .icon {
+                            color: $theme2;
+                        }
+                    }
+
+                    &_title {
+                        margin-bottom: 10px;
+                    }
+
+                    &_list {
+                        &-item {
+                            margin-bottom: 5px;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+
+                            .icon {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_presentation {
+                margin-top: 30px;
+
+                .title {
+                    margin-bottom: 15px;
+                }
+
+                .list {
+                    display: grid;
+                    grid-gap: 20px;
+                    grid-template-columns: 1fr;
+
+                    &-item {
+                        .media {
+                            height: 270px;
+
+                            margin-bottom: 10px;
+
+                            img {
+                                height: 100%;
+                            }
+                        }
+
+                        .main {
+                            &_specs {
+                                font-weight: 500;
+                                color: $theme1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        &_block {
+            .list {
+                &-item {
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &--services {
+                .list {
+                    &-item {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            &--contacts {
+                .icon {
+                    background: $theme2;
+                }
+
+                .list {
+                    &-item {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .page {
+        &_card {
+            padding-top: 150px;
+
+            &-title {
+                max-width: unset;
+            }
+        }
+    }
+    .content {
+        &_about {
+            &-media {
+                &_main {
+                    height: 280px;
+                }
+
+                &_thumbs {
+                    height: 140px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .page {
+        &_card {
+            padding-top: 205px;
+
+            &-title {
+                max-width: unset;
+            }
+        }
+    }
+    .content {
+        &_about {
+            margin-bottom: 60px;
+
+            &-media {
+                margin-bottom: 20px;
+
+                &_main {
+                    height: 360px;
+                    margin-bottom: 20px;
+
+                    .swiper-controls {
+                        padding: 20px;
+                    }
+                }
+            }
+
+            &-main {
+                &_group {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 20px;
+
+                    .block {
+                        margin-bottom: 0;
+                    }
+                }
+
+                &_presentation {
+                    .list {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .page {
+        &_card {
+            padding-top: 280px;
+        }
+    }
+    .content {
+        &_about {
+            width: calc(100% - 370px);
+            margin-bottom: 0;
+
+            &-media {
+                margin-bottom: 30px;
+
+                &_main {
+                    height: 420px;
+                }
+
+                &_thumbs {
+                    height: 115px;
+                }
+            }
+
+            &-main {
+
+                &_text {
+                    margin-bottom: 25px;
+                }
+
+                &_group {
+                    margin: 30px 0;
+
+                    .block {
+                        &_title {
+                            margin-bottom: 20px;
+                        }
+
+                        &_list {
+                            &-item {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+
+                &_presentation {
+                    margin-top: 40px;
+
+                    .title {
+                        margin-bottom: 30px;
+                    }
+
+                    .list {
+                        &-item {
+                            .media {
+                                margin-bottom: 20px;
+                            }
+
+                            .main {
+                                &_title {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &_aside {
+            width: 330px;
+
+            .sidebar_block--contacts {
+                .list .list-item .label {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .page {
+        &_card {
+            padding-top: 340px;
+        }
+    }
+    .content {
+        &_about {
+            width: calc(100% - 400px);
+        }
+    }
+}

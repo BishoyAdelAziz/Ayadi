@@ -1,0 +1,83 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// about section
+
+.about {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px 0;
+    margin-bottom: 0;
+
+    &_block {
+        margin-bottom: 0;
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .about {
+        gap: 60px 0;
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .about {
+        gap: 0;
+        margin-bottom: 170px;
+
+        &_block {
+            &:first-of-type {
+                height: 650px;
+
+                .about_block-media {
+                    left: unset;
+                    right: 0;
+                    top: -30px;
+                }
+
+                .about_block-main {
+                    padding-left: 0;
+                    margin-left: unset;
+                    margin-right: auto;
+                    padding-top: 170px;
+                    padding-right: 120px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                height: calc(850px - 170px);
+
+                .about_block-media {
+                    right: unset;
+                    left: 0;
+                    top: 0;
+                }
+
+                .about_block-main {
+                    margin-right: unset;
+                    margin-left: auto;
+                    padding-left: 120px;
+                }
+            }
+
+            &-main {
+                .list {
+                    margin-right: unset;
+                    margin-left: -290px;
+                    grid-gap: 40px;
+                }
+            }
+        }
+    }
+}

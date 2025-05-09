@@ -1,0 +1,162 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// steps section
+
+.steps {
+    text-align: center;
+    padding-bottom: 0;
+
+    &_header {
+        margin-bottom: 30px;
+
+        &-title {
+            margin: 0 0 15px;
+        }
+
+        &-text {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+    }
+
+    &_list {
+        &-item {
+            margin-bottom: 45px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+
+                .media {
+                    svg {
+                        max-height: 80px;
+                    }
+                }
+            }
+
+            .media {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                @include Card;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                margin: 0 auto 20px;
+                color: $theme2;
+
+                svg {
+                    max-height: 54px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &_number {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    top: -15px;
+                    right: -15px;
+                    color: #fff;
+                    background: $theme1;
+                }
+            }
+
+            .main {
+                max-width: 330px;
+                margin: 0 auto;
+
+                &_title {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &--middle {
+                .media {
+                    color: $theme1;
+
+                    &_number {
+                        background: $theme2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .steps {
+        &_header {
+            margin-bottom: 40px;
+
+            &-title {
+                margin: 0 auto 20px;
+            }
+        }
+
+        &_list {
+            margin: 0 -15px;
+
+            &-item {
+                width: 50%;
+                padding: 0 15px;
+
+                .media {
+                    margin: 0 auto 30px;
+                    width: 160px;
+                    height: 160px;
+
+                    svg {
+                        max-height: 64px;
+                    }
+
+                    &_number {
+                        top: 13px;
+                        right: 0;
+                    }
+                }
+
+                .main {
+                    &_title {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .steps {
+        &_list {
+            margin: 0 -15px;
+
+            &-item {
+                width: calc(100% / 3);
+                margin-bottom: 0;
+
+                &--middle {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

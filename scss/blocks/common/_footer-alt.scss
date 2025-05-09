@@ -1,0 +1,232 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// white footer component
+
+.footer {
+    background: #fff;
+    color: $textColor;
+    padding: 80px 0 40px;
+
+    &_main {
+        margin-bottom: 60px;
+
+        &-block {
+            &--about {
+                margin-bottom: 40px;
+
+                .brand {
+                    display: inline-block;
+                    margin-bottom: 20px;
+
+                    .logo_text {
+                        color: $headerColor;
+                    }
+                }
+
+                .text {
+                    margin-bottom: 30px;
+                }
+
+                .socials {
+                    gap: 0 15px;
+
+                    &-item {
+                        &:nth-of-type(odd) {
+                            .link {
+                                background: $theme1;
+                            }
+                        }
+
+                        &:nth-of-type(even) {
+                            .link {
+                                background: $theme2;
+                            }
+                        }
+
+                        .link {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            width: 38px;
+                            height: 38px;
+                            color: #fff;
+                            line-height: 1;
+                            font-size: 18px;
+                        }
+
+                        &:hover {
+                            .link {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--nav {
+                margin-bottom: 40px;
+
+                .list {
+                    &-item {
+                        display: inline-flex;
+                        align-items: center;
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                        font-family: $headerFont;
+                        font-weight: 500;
+                        color: $headerColor;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        .icon {
+                            padding-right: 10px;
+                            position: relative;
+                            top: -1px;
+                            left: 0;
+                            transition: all .3s ease-in-out;
+                            color: $theme1;
+                        }
+
+                        &:hover {
+                            .icon {
+                                color: $theme2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--instagram {
+                .list {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 8px;
+
+                    &-item {
+                        aspect-ratio: 1 / 1;
+                        overflow: hidden;
+                        backface-visibility: hidden;
+
+                        img {
+                            height: 100%;
+                            transition: .4s ease-in-out;
+                        }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_copyrights {
+        text-align: center;
+        width: 100%;
+        padding-top: 15px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: 0;
+            background: #bcbcbc;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .footer {
+        &_main {
+            &-block {
+                &--about {
+                    width: 100%;
+                }
+
+                &--nav {
+                    margin-bottom: 0;
+                }
+
+                &--instagram {
+                    width: 230px;
+                }
+            }
+        }
+
+        &_copyrights {
+            padding-top: 30px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .footer {
+        padding: 120px 0 60px;
+
+        &_main {
+            margin-bottom: 120px;
+
+            &-block {
+                &--about {
+                    margin-bottom: 0;
+                    max-width: 380px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .footer {
+        &_main {
+            &-block {
+                &--instagram {
+                    width: 300px;
+                }
+
+                &--about {
+                    .brand {
+                        margin-bottom: 30px;
+                    }
+
+                    .text {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1365.98px) {
+    .footer {
+        &_copyrights {
+            &:after {
+                width: 1280px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

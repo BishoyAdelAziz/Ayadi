@@ -1,0 +1,162 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// sidebar component
+
+.sidebar {
+    &_block {
+        &:nth-of-type(even) {
+            .sidebar_block-header .icon {
+                background: $theme2;
+            }
+        }
+
+        .list {
+            &-item {
+                display: flex;
+
+                .link {
+                    display: flex;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &--nav {
+            font-family: $textFont;
+
+            .list {
+                &-item {
+                    margin-bottom: 5px;
+
+                    .link {
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+
+                        .number {
+                            color: $darkgray;
+                        }
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--latest {
+            .list {
+                max-width: 330px;
+
+                &-item {
+                    margin-bottom: 10px;
+
+                    .media {
+                        margin-right: 10px;
+                        width: 33%;
+                        overflow: hidden;
+                        aspect-ratio: 16/9;
+
+                        img {
+                            transition: .4s ease-in-out;
+                            height: 100%;
+                        }
+                    }
+
+                    .main {
+                        display: flex;
+                        flex-direction: column;
+                        width: calc(67% - 10px);
+
+                        &_date {
+                            color: #6D6D6D;
+                            line-height: 1;
+
+                            .icon {
+                                color: $theme1;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        &_title {
+                            margin-bottom: 10px;
+                            font-weight: 600;
+                            flex-grow: 1;
+                        }
+                    }
+
+                    &:hover {
+                        .media img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        &--archives {
+            .list {
+                &-item {
+                    margin-bottom: 10px;
+
+                    .link {
+                        align-items: center;
+                        font-weight: 600;
+                        color: $headerColor;
+
+                        .icon {
+                            margin-right: 10px;
+                            color: $theme1;
+                            transition: margin-right .3s ease-in-out;
+                        }
+
+                        &:hover {
+                            .icon {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--comments {
+            .list {
+                &-item {
+                    margin-bottom: 10px;
+
+                    .icon {
+                        margin-right: 10px;
+                        position: relative;
+                        top: 3px;
+                        color: $theme1;
+                    }
+
+                    .comment {
+                        color: $headerColor;
+
+                        &_author {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media queries

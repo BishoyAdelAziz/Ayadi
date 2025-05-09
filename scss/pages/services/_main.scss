@@ -1,0 +1,115 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// services main content
+
+.iOS {
+    .page {
+        background: url("../img/placeholder.jpg") no-repeat center / cover;
+    }
+}
+
+.page {
+    background: url("../img/placeholder.jpg") no-repeat center fixed / cover;
+}
+
+.services {
+    &_list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        margin-bottom: 60px;
+
+        &-item {
+            .media {
+                position: relative;
+                height: 270px;
+                margin-bottom: 15px;
+
+                &_icon {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: $primary;
+                    width: 70px;
+                    height: 70px;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .main {
+                &_title {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .services {
+        &_list {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px 20px;
+
+            &-item {
+                .media {
+                    height: 240px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .services {
+        &_list {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px 20px;
+            margin-bottom: 80px;
+
+            &-item {
+                .media {
+                    height: 270px;
+                    margin-bottom: 30px;
+                }
+                .main {
+                    &_title {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .services {
+        &_list {
+            &-item {
+                .media {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}

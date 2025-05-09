@@ -1,0 +1,113 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// features section
+
+.iOS {
+    .page {
+        background: url("../img/placeholder.jpg") no-repeat center / cover;
+    }
+}
+
+.page {
+    background: url("../img/placeholder.jpg") no-repeat center fixed / cover;
+}
+
+.features {
+    &_main {
+        margin-bottom: 60px;
+
+        &-header {
+            margin-bottom: 15px;
+        }
+
+        &-list {
+            margin: 15px 0 30px;
+
+            &-item {
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .icon {
+                    margin-right: 10px;
+                    color: $theme1;
+                    position: relative;
+                    top: 1px;
+                }
+            }
+        }
+    }
+
+    &_media {
+        height: 350px;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .features {
+        &_media {
+            height: 450px;
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .features {
+        &_media {
+            height: 550px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .features {
+        padding-top: 90px;
+
+        &_media {
+            height: 650px;
+        }
+
+        &_main {
+            &-header {
+                margin-bottom: 30px;
+            }
+
+            &-list {
+                margin: 30px 0 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .features {
+        &_main {
+            width: calc(100% - 450px - 65px);
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+
+        &_media {
+            height: 605px;
+            width: 450px;
+        }
+    }
+}

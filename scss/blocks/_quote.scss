@@ -1,0 +1,128 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// quote form component
+
+.quote {
+    &_form {
+        max-width: 890px;
+        margin: 0 auto;
+
+        .field, .btn {
+            width: 100%;
+        }
+
+        &-btn {
+            margin-top: 40px;
+        }
+
+        &-row {
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+                margin-top: 30px;
+            }
+
+            .column {
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .quote {
+        &_form {
+            .btn {
+                width: calc(50% - 15px);
+            }
+
+            &-row {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+
+                &:nth-of-type(3) {
+                    .column {
+                        &:nth-of-type(3),
+                        &:nth-of-type(4) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                    margin-top: 30px;
+
+                    .column {
+                        &:nth-of-type(3),
+                        &:nth-of-type(4) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .column {
+                    width: calc(50% - 15px);
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .quote {
+        &_form {
+            .btn {
+                width: fit-content;
+                margin-top: 60px;
+            }
+
+            &-row {
+                &:first-of-type {
+                    .column {
+                        width: calc(100% / 3 - 20px);
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    .column {
+                        width: calc(100% / 4 - (90px / 4));
+                        margin-bottom: 0;
+                    }
+                }
+
+                &:last-of-type {
+                    margin-top: 40px;
+
+                    .column {
+                        width: fit-content;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

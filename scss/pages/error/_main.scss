@@ -1,0 +1,159 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// page 404 content
+
+.errorpage {
+    background: url("../img/error/bg.jpg") no-repeat center / cover;
+    position: relative;
+    min-height: 100vh;
+    padding: 15px 0;
+
+    .underlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 142, 0.7) 0%, rgba(1, 114, 128, 0.7) 100%);
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &_message {
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+
+        &-title {
+            color: #fff;
+            margin-bottom: 15px;
+
+            .code {
+                position: absolute;
+                left: 50%;
+                top: -15%;
+                transform: translateX(-50%);
+                opacity: 0.3;
+                font-size: 120px;
+                line-height: 1;
+            }
+        }
+
+        &-text {
+            color: $lightgray;
+            font-family: $headerFont;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+
+    &_search {
+        box-shadow: 0 2px 15px rgba(0, 0, 142, 0.1);
+        background: #fff;
+        height: 64px;
+        margin-bottom: 60px;
+
+        .field {
+            padding: 20px 30px;
+            width: calc(100% - 64px);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            font-family: $headerFont;
+            color: $headerColor;
+            height: 100%;
+            border-color: transparent;
+        }
+
+        .btn {
+            width: 64px;
+            font-size: 22px;
+        }
+    }
+
+    &_btn {
+        margin: 0 auto;
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 374.98px) {
+    .errorpage {
+        &_message {
+            max-width: 780px;
+            margin: 0 auto 30px;
+
+            &-title {
+                .code {
+                    top: -40%;
+                }
+            }
+        }
+
+        &_search {
+            max-width: 570px;
+            margin: 0 auto 60px;
+        }
+    }
+}
+
+@media screen and (min-width: 575.98px) {
+    .errorpage {
+        &_message {
+            &-title {
+                .code {
+                    font-size: 160px;
+                    top: -70%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .errorpage {
+        &_message {
+            &-title {
+                margin-bottom: 35px;
+
+                .code {
+                    font-size: 220px;
+                    top: -88%;
+                }
+            }
+
+            &-text {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .errorpage {
+        &_message {
+            &-title {
+                .code {
+                    font-size: 300px;
+                    top: -66%;
+                }
+            }
+        }
+    }
+}

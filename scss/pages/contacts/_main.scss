@@ -1,0 +1,136 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// contacts page main content
+
+.iOS {
+    .page {
+        background: url("../img/placeholder.jpg") no-repeat center / cover;
+    }
+}
+
+.page {
+    background: url("../img/placeholder.jpg") no-repeat center fixed / cover;
+}
+
+.contacts {
+    &_map {
+        height: 400px;
+    }
+
+    &_main {
+        &-form {
+            margin-bottom: 60px;
+        }
+
+        &-card {
+            position: relative;
+            height: 300px;
+            padding: 30px;
+
+            &_bg {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .content {
+                position: relative;
+                z-index: 2;
+            }
+
+            &_title {
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            &_btn {
+                min-width: 100%;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .contacts {
+        &_main {
+            &-card {
+                height: 300px;
+                padding: 80px 60px;
+
+                &_btn {
+                    min-width: 270px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .contacts_map {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .contact_data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .contact_data {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: -58px;
+        z-index: 1000000;
+        position: relative;
+        margin-bottom: 80px;
+        width: 100%;
+    }
+
+    .contacts {
+        &_map {
+            height: 660px;
+        }
+        &_main {
+            padding-top: 0;
+
+            .wrapper {
+                display: grid;
+                grid-template-columns: 640px calc(100% - 700px);
+                grid-gap: 60px;
+            }
+
+            &-form {
+                margin-bottom: 0;
+            }
+
+            &-card {
+                align-self: stretch;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-comment-dots-regular:before {
+  content: "\e900";
+}
+.icon-comment-alt-regular:before {
+  content: "\e901";
+}
+.icon-caret_down:before {
+  content: "\e902";
+}
+.icon-tags-solid:before {
+  content: "\e903";
+}
+.icon-calendar-check-regular:before {
+  content: "\e904";
+}
+.icon-folder-open-regular:before {
+  content: "\e905";
+}
+.icon-map-signs-solid:before {
+  content: "\e906";
+}
+.icon-map-pin-solid:before {
+  content: "\e907";
+}
+.icon-caret-down-solid:before {
+  content: "\e908";
+}
+.icon-facebook:before {
+  content: "\e909";
+}
+.icon-book-solid:before {
+  content: "\e90a";
+}
+.icon-twitter:before {
+  content: "\e90b";
+}
+.icon-search:before {
+  content: "\e90c";
+}
+.icon-caret_right:before {
+  content: "\e90d";
+}
+.icon-file-o:before {
+  content: "\e90e";
+}
+.icon-angle-double-right:before {
+  content: "\e90f";
+}
+.icon-angle-double-left:before {
+  content: "\e910";
+}
+.icon-folder-o:before {
+  content: "\e911";
+}
+.icon-user-circle:before {
+  content: "\e912";
+}
+.icon-calendar-o:before {
+  content: "\e913";
+}
+.icon-paper-plane:before {
+  content: "\e914";
+}
+.icon-send:before {
+  content: "\e914";
+}
+.icon-check-circle-o:before {
+  content: "\e915";
+}
+.icon-arrow-right-solid:before {
+  content: "\e916";
+}
+.icon-chevron_down--entypo:before {
+  content: "\e917";
+}
+.icon-reply-solid:before {
+  content: "\e918";
+}
+.icon-check-square-regular:before {
+  content: "\e919";
+}
+.icon-square-regular:before {
+  content: "\e91a";
+}
+.icon-check:before {
+  content: "\e92f";
+}
+.icon-youtube-play:before {
+  content: "\e930";
+}
+.icon-linkedin2:before {
+  content: "\e91b";
+}

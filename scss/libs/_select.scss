@@ -1,0 +1,101 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// custom select
+
+@import "../base/variables";
+
+.custom-select {
+    &-container {
+        position: relative;
+
+        &.is-disabled {
+            opacity: .3;
+        }
+
+        &.is-open {
+            .custom-select-panel {
+                max-height: 20.7em;
+                overflow-y: hidden;
+                margin-top: 10px;
+            }
+        }
+
+        select {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &-opener {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+        padding: 0 20px;
+        background: #fff;
+        border: 1px solid $lightgray;
+        transition: all .3s ease-in-out;
+        height: 45px;
+
+        .icon {
+            position: absolute;
+            right: 20px;
+            transition: all .3s ease-in-out;
+            color: $darkgray;
+        }
+
+        &:focus {
+            border-color: $primary;
+
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &-panel {
+        max-height: 0;
+        transition: max-height .3s ease-out, margin-top .3s ease-in-out;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+        width: 100%;
+    }
+
+    &-option {
+        padding: 10px 20px;
+        background: #fff;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        border: 1px solid $lightgray;
+        border-top: none;
+        border-bottom: none;
+
+        &:first-of-type {
+            padding-top: 20px;
+            border-top: 1px solid $lightgray;
+        }
+
+        &:last-of-type {
+            padding-bottom: 20px;
+            border-bottom: 1px solid $lightgray;
+        }
+
+        &.is-selected {
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,232 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// features section
+
+.features {
+    margin-top: -60px;
+
+    &_list {
+        background: #fff;
+        box-shadow: 0 2px 25px rgba(0, 0, 142, 0.152619);
+
+        .column {
+            border-bottom: 1px solid $lightgray;
+
+            &:last-of-type {
+                margin-bottom: 0;
+                border: none;
+            }
+        }
+
+        &-item {
+            padding: 40px 30px 30px;
+            border-bottom: 1px solid $lightgray;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            .media {
+                &.theme1 {
+                    color: $theme1;
+                }
+
+                &.theme2 {
+                    color: $theme2;
+                }
+            }
+
+            .media {
+                svg {
+                    height: 43px;
+                    width: 38px;
+                }
+            }
+
+            .main {
+                &_title {
+                    margin: 15px 0 10px;
+                }
+            }
+        }
+    }
+
+    &_nav {
+        position: relative;
+        padding: 40px 30px;
+        box-shadow: $shadow;
+        order: -1;
+
+        .bg, .bg_overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        .bg {
+            overflow: hidden;
+
+            img {
+                height: 100%;
+            }
+
+            &_overlay {
+                background: linear-gradient(130deg, #00008E -90%, #017280 112%);
+                opacity: .9;
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        &-header {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        &-list {
+            margin-bottom: 30px;
+
+            &_item {
+                margin-bottom: 15px;
+                color: $lightgray;
+
+                .link {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0 10px;
+
+                    .icon {
+                        color: $accent;
+                    }
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                .link:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 767.98px) {
+    .features {
+        margin-top: -100px;
+
+        &_list {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 0 30px;
+
+            .column {
+                width: calc(50% - 15px);
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                border: none;
+            }
+
+            &-item {
+                border-bottom: none;
+                padding: 0;
+
+                .main_text {
+                    max-width: 300px;
+                }
+            }
+        }
+
+        &_nav {
+            padding: 60px 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .features {
+        &_list, &_nav {
+            padding: 60px 80px;
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .features {
+        margin-top: -80px;
+        position: relative;
+        z-index: 500;
+
+        .container {
+            max-width: 1280px;
+            padding: 0 12px;
+        }
+
+        .card {
+            @include Card;
+        }
+
+        &_list {
+            width: calc(100% - 380px);
+            margin-bottom: 0;
+            background: transparent;
+            box-shadow: unset;
+            padding: 50px;
+            padding-right: 0;
+
+            &-item {
+                display: flex;
+
+                .media {
+                    margin-right: 15px;
+                }
+
+                .main {
+                    &_title {
+                        margin: 0 0 5px;
+                    }
+                }
+            }
+
+            .column {
+                width: calc(50% - 25px);
+                gap: 30px;
+            }
+        }
+
+        &_nav {
+            order: unset;
+            width: 100%;
+            max-width: 380px;
+            margin: -50px 50px 50px 50px;
+            padding: 60px 50px;
+
+            .content {
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// page header component
+
+.page {
+    height: 300px;
+    position: relative;
+    padding: 0 12px;
+
+    &_overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 142, 0.8) 0%, rgba(1, 114, 128, 0.8) 100%);
+        z-index: 1;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    &_card {
+        position: relative;
+        z-index: 10;
+        padding-top: 150px;
+
+        &-breadcrumbs {
+            margin-top: 20px;
+            color: #BCBCBC;
+        }
+
+        &-title {
+            line-height: 1.3;
+            color: #fff;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .page {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .page {
+        height: 400px;
+
+        &_card {
+            padding-top: 205px;
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .page {
+        height: 500px;
+
+        &_card {
+            padding-top: 280px;
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .page {
+        height: 610px;
+        &_card {
+            padding-top: 340px;
+        }
+    }
+}

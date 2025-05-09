@@ -1,0 +1,123 @@
+/* Shared Header*/
+.Header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 142, 0.7),
+      rgba(1, 114, 128, 0.7)
+    ),
+    url("/img/FactoryCalture/Calture.png") center/cover no-repeat;
+  z-index: 1;
+}
+/* Shared Header*/
+.Who-We-Are-Container {
+  width: 65%;
+  margin: 10vh auto;
+}
+.Who-We-Are-Container h3 {
+  margin: 5vh 0;
+}
+.About-Quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 90%;
+  gap: 5vh;
+  font-weight: 500;
+  margin: 5vh 0px;
+}
+@media screen and (max-width: 575.98px) {
+  .Who-We-Are-Container {
+    width: 90%;
+  }
+  .Who-We-Are-Container h3 {
+    margin: 5vh 0;
+  }
+  .About-Quote {
+    width: 90%;
+    gap: 5vh;
+    font-weight: 500;
+    margin: 5vh 0px;
+  }
+  .About-Quote h3 {
+    font-size: 1.5rem;
+  }
+  .About-Quote p {
+    font-size: 1rem;
+  }
+}
+.About-Ayadi-Container {
+  width: 65%;
+  margin: 10vh auto;
+}
+.About-Ayadi-Container h3 {
+  margin: 5vh 0;
+}
+.About-Ayadi-Quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 90%;
+  gap: 5vh;
+  font-weight: 500;
+  margin: 5vh 0px;
+}
+@media screen and (max-width: 575.98px) {
+  .About-Ayadi-Container {
+    width: 90%;
+  }
+  .About-Ayadi-Container h3 {
+    margin: 5vh 0;
+  }
+  .About-Ayadi-Quote {
+    width: 90%;
+    gap: 5vh;
+    font-weight: 500;
+    margin: 5vh 0px;
+  }
+  .About-Ayadi-Quote h3 {
+    font-size: 1.5rem;
+  }
+  .About-Ayadi-Quote p {
+    font-size: 1rem;
+  }
+}
+.About-Ayadi-Quote p:nth-child(odd) {
+  font-size: 1rem; /* or whatever size you prefer */
+}
+
+.About-Ayadi-Quote p:nth-child(even) {
+  font-size: 1rem; /* or whatever size you prefer */
+}
+
+/* For mobile responsiveness */
+@media screen and (max-width: 575.98px) {
+  .About-Ayadi-Quote p:nth-child(odd) {
+    font-size: 1.1rem;
+  }
+  .About-Ayadi-Quote p:nth-child(even) {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Who-We-Are-Container img {
+    height: 40vh;
+  }
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

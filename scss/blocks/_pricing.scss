@@ -1,0 +1,221 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// pricing section
+
+.plans {
+    &_header {
+        margin-bottom: 40px;
+
+        &-title {
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            margin-bottom: 30px;
+        }
+
+        &-btn {
+            width: 100%;
+        }
+    }
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+    &_card {
+        @include Card;
+        padding: 40px 20px 40px 30px;
+        position: relative;
+
+        &-label {
+            position: absolute;
+            height: 40px;
+            width: 180px;
+            background: $accent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $headerFont;
+            color: $headerColor;
+            font-weight: 600;
+            font-size: 14px;
+            visibility: hidden;
+        }
+
+        &-main {
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 10px 15px;
+
+            .saving {
+                font-family: $headerFont;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 18px;
+                color: $theme2;
+            }
+        }
+
+        &-plan {
+            padding: 20px 10px;
+            flex-direction: column;
+
+            .plan {
+                color: $theme2;
+            }
+
+            .month {
+                font-weight: 500;
+                font-size: 18px;
+                position: relative;
+                left: -5px;
+            }
+
+            .annual {
+                color: #6D6D6D;
+                font-size: 14px;
+            }
+        }
+
+        &-main, &-plan {
+            display: flex;
+            border-bottom: 1px solid $lightgray;
+        }
+
+        &-features {
+            padding: 30px 10px;
+
+            &_item {
+                font-size: 14px;
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &.highlight {
+                    font-weight: 600;
+                }
+
+                .icon {
+                    margin-right: 5px;
+                    color: #6D6D6D;
+                }
+            }
+        }
+
+        &-btn {
+            width: 100%;
+        }
+
+        &--highlight {
+            .pricing_card-main .saving,
+            .pricing_card-plan .plan {
+                color: $theme1;
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .plans {
+        &_header {
+            &-title {
+                max-width: 600px;
+                margin: 0 0 15px;
+            }
+
+            &-text {
+                max-width: 890px;
+                margin: 0 0 30px;
+            }
+
+            &-btn {
+                width: fit-content;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .pricing {
+        &_card {
+            &-btn {
+                width: fit-content;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .pricing {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+
+        &_card {
+            padding: 60px 30px 60px 40px;
+
+            &-label {
+                visibility: visible;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -40px;
+            }
+
+            &-main {
+                padding: 0 10px 25px;
+            }
+
+            &-plan {
+                padding: 30px 10px;
+            }
+
+            &-features {
+                padding: 40px 10px;
+
+                &_item {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .plans {
+        &_header {
+            margin-bottom: 50px;
+
+            &-title {
+                margin: 0 0 30px;
+            }
+
+            &-text {
+                margin: 0 0 50px;
+            }
+        }
+    }
+    .pricing {
+        grid-gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .pricing {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

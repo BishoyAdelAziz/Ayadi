@@ -1,0 +1,124 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// projects section
+
+.projects {
+    padding-bottom: 177px;
+
+    &_slider {
+        overflow: visible;
+        margin: 0 -50px;
+
+        &-slide {
+            position: relative;
+            height: 220px;
+            width: calc(100% / 3);
+
+            .media {
+                height: 100%;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .info {
+                position: absolute;
+                color: #fff;
+                background: $theme1;
+                padding: 30px;
+                max-width: 300px;
+                width: 100%;
+                left: 50%;
+                top: 150px;
+                transform: translateX(-50%);
+                z-index: 2;
+                transition: all .6s ease-in-out;
+                visibility: hidden;
+                opacity: 0;
+
+                &_title {
+                    font-size: 20px;
+                    color: #fff;
+                    margin-bottom: 10px;
+                }
+
+                &_text {
+                    margin-bottom: 30px;
+                    color: $lightgray;
+                }
+            }
+
+            &.swiper-slide-active {
+                .info {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .projects {
+        padding-bottom: 147px;
+
+        &_slider {
+            &-slide {
+                height: 350px;
+                width: 50%;
+
+                .info {
+                    top: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .projects {
+        &_slider {
+            &-slide {
+                .info {
+                    &_title {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .projects {
+        padding-bottom: 147px;
+
+        &_slider {
+            &-slide {
+                height: 490px;
+                width: 780px;
+
+                .info {
+                    left: -60px;
+                    transform: none;
+                    top: unset;
+                    bottom: -150px;
+                    padding: 40px 30px;
+                }
+            }
+        }
+    }
+}

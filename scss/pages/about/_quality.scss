@@ -1,0 +1,122 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// quality section
+
+.quality {
+    padding-bottom: 0;
+
+    &_main {
+        text-align: center;
+
+        &-text {
+            margin: 15px 0 30px;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .progressDisplay {
+                width: 150px;
+                height: 150px;
+                position: relative;
+                margin: 0 auto 15px;
+            }
+
+            .progress-text {
+                color: $headerColor;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &_media {
+        height: 350px;
+        margin-bottom: 40px;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+    .quality {
+        &_main {
+            text-align: left;
+            &-list {
+                text-align: center;
+                flex-direction: row;
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+
+        &_media {
+            height: 450px;
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .quality {
+        &_main {
+            &-list {
+                gap: 0 65px;
+                justify-content: center;
+            }
+        }
+
+        &_media {
+            height: 550px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 991.98px) {
+    .quality {
+        &_main {
+            &-list {
+                justify-content: flex-start;
+            }
+            &-text {
+                margin: 30px 0 50px;
+            }
+        }
+
+        &_media {
+            height: 650px;
+        }
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .quality {
+        &_main {
+            width: calc(100% - 450px - 50px);
+            margin-bottom: 0;
+        }
+
+        &_media {
+            width: 450px;
+            height: 605px;
+            margin-bottom: 0;
+        }
+    }
+}

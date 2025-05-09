@@ -1,0 +1,141 @@
+/**
+ * Rolso
+ * Modern cargo, transport and logistics HTML Template. Exclusively built for transport, logistics, delivery, moving, and cargo websites.
+ * Exclusively on https://1.envato.market/rolso-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.0
+ * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// first screen slider section
+
+.slider {
+  min-height: calc(100vh + 180px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 200px 0 60px;
+
+  &_media,
+  &_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &_media {
+    z-index: -1;
+
+    &-slide {
+      img {
+        height: 100%;
+        transform: scale(1.2);
+        transition: transform 5s linear;
+      }
+
+      &.swiper-slide-duplicate-active,
+      &.swiper-slide.swiper-slide-active {
+        img {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &_overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 142, 0.8) 0%,
+      rgba(1, 114, 128, 0.8) 100%
+    );
+
+    &-brand {
+      font-family: $headerFont;
+      font-weight: 700;
+      color: #fff;
+      opacity: 0;
+      font-size: 120px;
+      line-height: 1;
+      position: absolute;
+      bottom: 17px;
+      right: -36px;
+    }
+  }
+
+  &_content {
+    position: relative;
+    z-index: 2;
+
+    &-title {
+      color: #fff;
+    }
+
+    &-text {
+      color: $lightgray;
+      max-width: 680px;
+      margin: 15px 0 30px;
+      font-weight: 600;
+    }
+  }
+}
+
+// media queries
+
+@media screen and (min-width: 575.98px) {
+  .slider {
+    &_overlay {
+      &-brand {
+        opacity: 0.15;
+        bottom: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .slider {
+    min-height: 100vh;
+    &_overlay {
+      &-brand {
+        font-size: 240px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 991.98px) {
+  .slider {
+    min-height: calc(100vh + 180px);
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .slider {
+    &_overlay {
+      &-brand {
+        font-size: 350px;
+        bottom: 170px;
+        right: -83px;
+      }
+    }
+
+    &_content {
+      margin-bottom: 130px;
+
+      &-title {
+        max-width: 960px;
+      }
+
+      &-text {
+        margin: 30px 0 50px;
+      }
+    }
+  }
+}

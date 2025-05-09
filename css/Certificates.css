@@ -1,0 +1,154 @@
+/* Shared Header*/
+.Header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 142, 0.7),
+      rgba(1, 114, 128, 0.7)
+    ),
+    url("/img/Certificates/Certifcate\ Header.png") center/cover no-repeat;
+  z-index: 1;
+}
+/* Shared Header*/
+/* Base Styles */
+.certificates-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.certificates-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.certificates-intro.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certificates-intro h3 {
+  color: #ad2142;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.certificates-intro p {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.certificates-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.certificate-card {
+  width: 600px;
+  height: 1000px;
+  max-width: 900px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: calc(var(--order) * 0.15s);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.certificate-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .certificates-section {
+    padding: 4rem 2rem;
+    gap: 4rem;
+  }
+
+  .certificates-grid {
+    gap: 3rem;
+  }
+
+  .certificate-card {
+    max-width: 85%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .certificate-card {
+    max-width: 80%;
+  }
+}
+.section-Clients {
+  overflow: hidden;
+  padding: 40px 0;
+}
+.Clients-Content {
+  text-align: center;
+  padding: 5vh 0;
+}
+.logo-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  width: max-content; /* Allow track to expand beyond container */
+  animation: scroll 15s linear infinite;
+}
+
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-track img {
+  height: 60px;
+  width: auto;
+  margin: 0 30px;
+
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by half of the track width */
+  }
+}
