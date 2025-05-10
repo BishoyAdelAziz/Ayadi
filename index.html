@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home | Ayadi</title>
     <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
+    <link rel="stylesheet preload" as="style" href="css/Header.css" />
     <link rel="stylesheet preload" as="style" href="css/icomoon.css" />
     <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -18,26 +19,35 @@
   </head>
   <body>
     <header class="global-header">
-      <div class="App-Logo"> <img src="img/Ayadi-Icon.webp" width="100" height="80"/></div>
+      <div class="App-Logo">
+        <img src="img/Ayadi-Icon.webp"  alt="Ayadi Logo"/>
+      </div>
+    
       <nav class="Links-Container" id="nav-links">
         <a href="index.html">Home</a>
         <div class="dropdown">
-          <a href="#" class="dropbtn">About<i style="padding-left: 0.2em;" class="icon-caret-down-solid icon"></i>
-          </a>
+          <a href="#" class="dropbtn">About<i class="icon-caret-down-solid icon" style="padding-left: 0.2em;"></i></a>
           <div class="dropdown-content">
-            <a href="team.html">Team</a>
-            <a href="history.html">History</a>
-            <a href="mission.html">Mission</a>
+            <a href="Who-We-Are.html#About-Ayadi">Brief Introduction</a>
+            <a href="FactoryCalture.html">Factory Culture</a>
+            <a href="FounderSpeech.html">Founder’s speech</a>
+            <a href="LeaderShip.html">Leadership Team</a>
+            <a href="Global Reach.html">Global Reach</a>
           </div>
         </div>
         <a href="Products.html">Products</a>
-        <a href="Products.html">Certificates</a>
-        <a href="Products.html">Contact Us</a>
-        <a class="Download-Btn" href="Catalogue.pdf" download="Ayadi Catalogue">Catalogue <i class="fas fa-download"></i></a>
+        <a href="Certificates.html">Certificates</a>
+        <a href="contacts.html">Contact Us</a>
+        <!-- Download button duplicated inside nav for small screens -->
+        <a class="Download-Btn mobile-only" href="Catalogue.pdf" download="Ayadi Catalogue">Catalogue <i class="fas fa-download"></i></a>
       </nav>
-      
+    
+      <!-- Download button outside nav for large screens -->
+      <a class="Download-Btn desktop-only" href="Catalogue.pdf" download="Ayadi Catalogue">Catalogue <i class="fas fa-download"></i></a>
+    
       <div class="menu-icon" id="menu-icon">&#9776;</div>
     </header>
+    
     <a
     href="https://api.whatsapp.com/send?phone=201023859711"
     class="whatsapp-float"
@@ -569,6 +579,7 @@
     <!-- <script src="js/index.min.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/Header.js"></script>
     <!-- Clients Swiper -->
   </body>
 </html>

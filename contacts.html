@@ -10,6 +10,7 @@
     <title>Contacts | Rolso</title>
     <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
     <link rel="stylesheet preload" as="style" href="css/icomoon.css" />
+    <link rel="stylesheet preload" as="style" href="css/Header.css" />
     <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
@@ -17,179 +18,34 @@
     <link rel="stylesheet" href="css/EditContacts.css" />
   </head>
   <body>
-    <header style="background-color: #01637e;" class="header" data-page="home2">
-      <nav  class="header_nav">
-        <div
-        
-          class="container d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-between flex-row"
-        >
-          <a
-            class="header_nav-trigger"
-            href="#"
-            id="headerTrigger"
-            data-bs-toggle="collapse"
-            data-bs-target="#headerMenu"
-            aria-controls="headerMenu"
-          >
-            <svg
-              width="100%"
-              height="100%"
-              enable-background="new 0 0 32 32"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m29.5625 5.3092h-27.125c-1.06854 0-1.9375.86896-1.9375 1.9375s.86896 1.9375 1.9375 1.9375h27.125c1.06812 0 1.9375-.86896 1.9375-1.9375s-.86938-1.9375-1.9375-1.9375z"
-                fill="currentColor"
-              />
-              <path
-                d="m29.5625 14.0625h-27.125c-1.06854 0-1.9375.86896-1.9375 1.9375s.86896 1.9375 1.9375 1.9375h27.125c1.06812 0 1.9375-.86896 1.9375-1.9375s-.86938-1.9375-1.9375-1.9375z"
-                fill="currentColor"
-              />
-              <path
-                d="m29.562 22.816h-27.125c-1.0685 0-1.9375 0.8689-1.9375 1.9375 0 1.0685 0.86896 1.9375 1.9375 1.9375h27.125c1.0681 0 1.9375-0.86896 1.9375-1.9375 0-1.0686-0.86938-1.9375-1.9375-1.9375z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
-          <span class="logo_media">
-            <img src="img/Ayadi-Icon.webp" alt="Icon" class="hero-icon" />
-          </span>
-          
-        </a>
-      </span>
-          <div class="header_nav-wrapper collapse" id="headerMenu">
-            
-            <ul class="header_nav-menu d-flex flex-column flex-lg-row">
-              
-              <li class="header_nav-menu_item dropdown">
-                <a
-                  class="nav-link nav-item dropdown-toggle d-inline-flex align-items-center"
-                  href="index.html"
-                  data-bs-toggle="collapse"
-                  data-bs-target="index.html"
-                  aria-expanded="false"
-                  aria-controls="homeMenu"
-                  data-page="home"
-                >
-                  Home
-                
-                </a>
-                <div class="dropdown-menu collapse" id="homeMenu">                    
-                      <a
-                        class="dropdown-item nav-item"
-                        data-page="home"
-                        href="index.html"
-                      >
-                        Home 
-                      </a>
-                </div>
-              </li>
-              <li class="header_nav-menu_item dropdown">
-                <a
-                  class="nav-link nav-item dropdown-toggle d-inline-flex align-items-center"
-                  href="about.html"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#aboutMenu"
-                  data-trigger="dropdown"
-                  aria-expanded="false"
-                  aria-controls="aboutMenu"
-                  data-page="about"
-                >
-                  About
-                  <i class="icon-caret-down-solid icon"></i>
-                </a>
-                <div class="dropdown-menu collapse" id="aboutMenu">
-                  <ul class="dropdown-list">
-                    <li class="list-item">
-                      <a
-                        class="dropdown-item nav-item"
-                        data-page="About Ayadi"
-                        href="Who-We-Are.html#About-Ayadi"
-                        >
-                        Brief Introduction
-                      </a>
-                    </li>
-                    <li class="list-item">
-                      <a
-                        class="dropdown-item nav-item"
-                        data-page="Factory Calture"
-                        href="FactoryCalture.html"
-                      >
-                      Factory Culture
-                      </a>
-                    </li>
-                    <li class="list-item">
-                      <a
-                        class="dropdown-item nav-item"
-                        data-page="Founder Speech"
-                        href="FounderSpeech.html"
-                      >
-                      Founder’s speech
-                      </a>
-                    </li>
-                    <li class="list-item">
-                      <a
-                        class="dropdown-item nav-item"
-                        data-page="LeaderShip"
-                        href="LeaderShip.html"
-                      >
-                      Leadership Team
-                      </a>
-                    </li>
-                    <li class="list-item">
-                      <a
-                        class="dropdown-item nav-item"
-                        data-page="Global Reach"
-                        href="Global Reach.html"
-                      >
-                      Global Reach                      </a>
-                    </li>
-                    
-                  </ul>
-                </div>
-              </li>
-              <li class="header_nav-menu_item">
-                <a
-                  class="nav-item nav-link"
-                  href="Products.html"
-                  data-page="Products"
-                  > Products
-                  </a
-                >
-              </li>
-              <li class="header_nav-menu_item">
-                <a
-                  class="nav-item nav-link"
-                  href="Certificates.html"
-                  data-page="Certificates"
-                  > Certificates
-                  </a
-                >
-              </li>
-              <li class="header_nav-menu_item">
-                <a
-                style="text-wrap: nowrap;"
-                  class="nav-item nav-link"
-                  href="contacts.html"
-                  data-page="Contacts"
-                  > Contact Us
-                  </a
-                >
-              </li>
-              <li  class="header_nav-menu_item">
-                <a
-                style="background-color: #ad2142; padding: 15px 25px; border-radius: 40px; text-wrap: nowrap; "
-                  class="nav-item nav-link"
-                  href="Catalogue.pdf"
-                  download="Ayadi Catalogue"
-                  target="_blank"
-                  data-page="Contacts"
-                > Catalogue  <i class="fas fa-download"></i></a>
-              </li>
+    <header class="global-header">
+      <div class="App-Logo">
+        <img src="img/Ayadi-Icon.webp"  alt="Ayadi Logo"/>
+      </div>
+    
+      <nav class="Links-Container" id="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">About<i class="icon-caret-down-solid icon" style="padding-left: 0.2em;"></i></a>
+          <div class="dropdown-content">
+            <a href="Who-We-Are.html#About-Ayadi">Brief Introduction</a>
+            <a href="FactoryCalture.html">Factory Culture</a>
+            <a href="FounderSpeech.html">Founder’s speech</a>
+            <a href="LeaderShip.html">Leadership Team</a>
+            <a href="Global Reach.html">Global Reach</a>
           </div>
         </div>
+        <a href="Products.html">Products</a>
+        <a href="Certificates.html">Certificates</a>
+        <a href="contacts.html">Contact Us</a>
+        <!-- Download button duplicated inside nav for small screens -->
+        <a class="Download-Btn mobile-only" href="Catalogue.pdf" download="Ayadi Catalogue">Catalogue <i class="fas fa-download"></i></a>
       </nav>
+    
+      <!-- Download button outside nav for large screens -->
+      <a class="Download-Btn desktop-only" href="Catalogue.pdf" download="Ayadi Catalogue">Catalogue <i class="fas fa-download"></i></a>
+    
+      <div class="menu-icon" id="menu-icon">&#9776;</div>
     </header>
     <a
     href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER"
@@ -553,5 +409,6 @@
       </div>
     </footer>
     <script src="js/common.min.js"></script>
+    <script src="js/Header.js"></script>
   </body>
 </html>

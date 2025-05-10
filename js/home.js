@@ -278,24 +278,3 @@ document.addEventListener("DOMContentLoaded", function () {
     quoteImage.style.transform = "scale(1)";
   });
 });
-// Global Header
-document.querySelector(".dropbtn").addEventListener("click", function (e) {
-  e.preventDefault();
-  const dropdownContent = this.nextElementSibling;
-  dropdownContent.style.display =
-    dropdownContent.style.display === "flex" ? "none" : "flex";
-});
-const menuIcon = document.getElementById("menu-icon");
-const navLinks = document.getElementById("nav-links");
-
-menuIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-window.addEventListener("scroll", () => {
-  const header = document.querySelector(".global-header");
-  if (window.scrollY > 50) {
-    header.classList.add("shrink");
-  } else {
-    header.classList.remove("shrink");
-  }
-});
