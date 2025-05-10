@@ -1,39 +1,34 @@
-// Improved JavaScript
-document.addEventListener("DOMContentLoaded", () => {
-  // Mobile menu toggle
+document.addEventListener("DOMContentLoaded", function () {
   const menuIcon = document.getElementById("menu-icon");
   const navLinks = document.getElementById("nav-links");
 
-  menuIcon.addEventListener("click", () => {
+  // Toggle mobile menu
+  menuIcon.addEventListener("click", function () {
     navLinks.classList.toggle("active");
-    menuIcon.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
   });
 
-  // Enhanced dropdown functionality
+  // Mobile dropdown functionality
   document.querySelectorAll(".dropbtn").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        const dropdown = this.closest(".dropdown");
-        const content = this.nextElementSibling;
-
-        // Close other open dropdowns
-        document.querySelectorAll(".dropdown-content").forEach((dc) => {
-          if (dc !== content) dc.style.display = "none";
-        });
-
-        // Toggle current dropdown
-        content.style.display =
-          content.style.display === "block" ? "none" : "block";
+        const dropdown = this.parentElement;
+        const content = dropdown.querySelector(".dropdown-content");
+        content.classList.toggle("active");
       }
     });
   });
 
-  // Close dropdowns when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".dropdown") && window.innerWidth <= 768) {
+  // Close menu when clicking outside (for mobile)
+  document.addEventListener("click", function (e) {
+    if (
+      window.innerWidth <= 768 &&
+      !e.target.closest(".Links-Container") &&
+      !e.target.closest(".menu-icon")
+    ) {
+      navLinks.classList.remove("active");
       document.querySelectorAll(".dropdown-content").forEach((dc) => {
-        dc.style.display = "none";
+        dc.classList.remove("active");
       });
     }
   });
