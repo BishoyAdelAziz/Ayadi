@@ -33,3 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// Current year
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+});

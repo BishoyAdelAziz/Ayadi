@@ -283,8 +283,9 @@
 
 .title {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
+  color: #fff;
 }
 
 .form {
@@ -404,4 +405,8 @@
   .data.highlighted {
     order: -1; /* Make highlighted appear first on mobile */
   }
+}
+.third-row a {
+  color: #b62348;
+  opacity: 0.8;
 }
