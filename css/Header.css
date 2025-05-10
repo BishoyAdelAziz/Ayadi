@@ -401,10 +401,6 @@
   .data {
     min-width: 100%;
   }
-
-  .data.highlighted {
-    order: -1; /* Make highlighted appear first on mobile */
-  }
 }
 .third-row a {
   color: #b62348;
