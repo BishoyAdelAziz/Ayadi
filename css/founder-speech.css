@@ -9,7 +9,7 @@
       rgba(0, 0, 142, 0.7),
       rgba(1, 114, 128, 0.7)
     ),
-    url("/img/Founder/FounderHeader.png") center/cover no-repeat;
+    url("/img/Founder/FounderHeader.webp") center/cover no-repeat;
   z-index: 1;
 }
 .Founder-Sppech-Container {
