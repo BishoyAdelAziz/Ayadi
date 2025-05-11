@@ -29,13 +29,13 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .team-card {
   perspective: 1000px;
-  height: 350px;
+  height: 300px;
 }
 
 .card-inner {
@@ -56,6 +56,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 10px; /* Adjusted padding */
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -93,6 +94,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  padding: 0 10px;
 }
 
 .member-name {
@@ -150,6 +152,10 @@
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
+  .team-card {
+    perspective: 1000px;
+    height: 350px;
+  }
   .Section-title {
     flex-direction: row; /* Keep horizontal layout on mobile */
     align-items: center;

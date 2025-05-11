@@ -38,18 +38,6 @@
   transform: translateY(0);
 }
 
-.Founder-Quote p:nth-child(odd) {
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
-.Founder-Quote p:nth-child(even) {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
 /* Special classes for first two paragraphs */
 
 /* Responsive Design */
@@ -64,14 +52,6 @@
     width: 85%;
   }
 
-  .Founder-Quote p:nth-child(odd) {
-    font-size: 1.1rem;
-  }
-
-  .Founder-Quote p:nth-child(even) {
-    font-size: 0.95rem;
-  }
-
   .Founder-Quote-first {
     font-size: 1.2rem !important;
   }
@@ -80,14 +60,6 @@
 @media screen and (max-width: 575.98px) {
   .Founder-Sppech-Container {
     width: 90%;
-  }
-
-  .Founder-Quote p:nth-child(odd) {
-    font-size: 1rem;
-  }
-
-  .Founder-Quote p:nth-child(even) {
-    font-size: 0.9rem;
   }
 
   .Founder-Quote-first {
@@ -101,7 +73,7 @@
 .Brand-History-Container p {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 5vh;
 }
 h3 {

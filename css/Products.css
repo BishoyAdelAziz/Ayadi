@@ -181,6 +181,10 @@ section hr {
 
 /* Responsive */
 @media (max-width: 780px) {
+  .Category-Item {
+    width: 200px;
+    height: 200px;
+  }
   .Category-Container {
     grid-template-columns: repeat(2, 1fr);
   }

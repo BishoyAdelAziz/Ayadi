@@ -15,6 +15,7 @@
 }
 /* Shared Header*/
 /* Base Styles */
+/* Certificates Section - Responsive Adjustments */
 .certificates-section {
   width: 100%;
   max-width: 1400px;
@@ -59,9 +60,8 @@
 }
 
 .certificate-card {
-  width: 600px;
-  height: 1000px;
-  max-width: 900px;
+  width: 100%;
+  max-width: 800px; /* Reduced from 900px for better mobile display */
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -69,6 +69,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  aspect-ratio: 3/5; /* Maintain 600x1000 proportion (3:5 ratio) */
 }
 
 .certificate-card.animate {
@@ -78,33 +79,36 @@
 
 .certificate-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover; /* Changed from contain to cover for better filling */
 }
 
 /* Responsive Adjustments */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .certificates-section {
-    padding: 4rem 2rem;
-    gap: 4rem;
-  }
-
-  .certificates-grid {
-    gap: 3rem;
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
 
   .certificate-card {
-    max-width: 85%;
-    height: auto;
+    max-width: 95%;
+    aspect-ratio: 3/4; /* Slightly adjust ratio for mobile */
   }
 }
 
 @media (min-width: 1024px) {
   .certificate-card {
-    max-width: 80%;
+    max-width: 700px; /* Slightly smaller for large screens */
   }
 }
+
+@media (min-width: 1400px) {
+  .certificate-card {
+    max-width: 800px; /* Original size for very large screens */
+  }
+}
+
 .section-Clients {
   overflow: hidden;
   padding: 40px 0;

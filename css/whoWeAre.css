@@ -7,8 +7,8 @@
   left: 0;
   background: linear-gradient(
       135deg,
-      rgba(0, 0, 142, 0.7),
-      rgba(1, 114, 128, 0.7)
+      rgba(0, 0, 142, 0.6),
+      rgba(1, 114, 128, 0.6)
     ),
     url("/img/FactoryCalture/Calture.webp") center/cover no-repeat;
   z-index: 1;
