@@ -10,7 +10,7 @@
       rgba(0, 0, 142, 0.6),
       rgba(1, 114, 128, 0.6)
     ),
-    url("/img/FactoryCalture/Calture.webp") center/cover no-repeat;
+    url("../img/FactoryCalture/Calture.webp") center/cover no-repeat;
   z-index: 1;
 }
 /* Shared Header*/
@@ -88,23 +88,9 @@
     font-size: 1rem;
   }
 }
-.About-Ayadi-Quote p:nth-child(odd) {
-  font-size: 1rem; /* or whatever size you prefer */
-}
-
-.About-Ayadi-Quote p:nth-child(even) {
-  font-size: 1rem; /* or whatever size you prefer */
-}
 
 /* For mobile responsiveness */
-@media screen and (max-width: 575.98px) {
-  .About-Ayadi-Quote p:nth-child(odd) {
-    font-size: 1.1rem;
-  }
-  .About-Ayadi-Quote p:nth-child(even) {
-    font-size: 0.9rem;
-  }
-}
+
 @media screen and (max-width: 768px) {
   .Who-We-Are-Container img {
     height: 40vh;

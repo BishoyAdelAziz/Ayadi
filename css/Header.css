@@ -72,6 +72,19 @@
   background-color: #b62348;
   color: #fff;
 }
+.desktop-only {
+  background-color: #b62348;
+  padding: 0.8rem 1.2rem;
+  border-radius: 20px;
+  color: white;
+}
+.mobile-only {
+  background-color: #b62348;
+  padding: 0.8rem 1.2rem;
+  border-radius: 20px;
+  color: white;
+  text-align: start;
+}
 
 /* Show dropdown on hover for desktop */
 @media (min-width: 769px) {
@@ -88,19 +101,19 @@
 
 /* Download button */
 .Download-Btn {
-  background-color: #b62348;
-  color: #fff;
-  padding: 0.5rem 1.1rem;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  white-space: nowrap;
+  .Download-Btn {
+    white-space: normal; /* Allow text to wrap */
+    text-align: center;
+    padding: 0.5rem 0.5rem; /* Reduced padding */
+    font-size: 1rem; /* Slightly smaller font */
+    min-width: 120px; /* Minimum width to prevent too small buttons */
+  }
 }
 
 .Download-Btn:hover {
-  background-color: #9e1f3e;
+  background-color: #1a97c8;
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu icon hidden on desktop */
@@ -114,10 +127,22 @@
 
 /* Responsive for small screens - FIXED DROPDOWN ISSUE */
 @media (max-width: 768px) {
+  .Links-Container .Download-Btn.mobile-only {
+    width: auto; /* Changed from 30% to auto */
+    margin: 1rem auto; /* Centers the button */
+    padding: 0.5rem 1rem; /* Adjusted padding */
+  }
+
+  /* You might want to adjust the existing rule to avoid conflicts */
+  .mobile-only {
+    display: block;
+    padding: 5rem 1rem;
+    font-size: 1rem;
+    /* Remove the old margin and text-align */
+  }
   .global-header {
     justify-content: space-between;
-    align-items: start;
-    padding: 2vh 1.5rem;
+    align-items: center;
   }
 
   .Links-Container {
@@ -139,8 +164,8 @@
 
   .Links-Container.active {
     display: flex;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     max-height: 100vh;
     opacity: 1;
     overflow-y: auto;
@@ -169,7 +194,7 @@
   /* Show mobile download button inside nav */
   .mobile-only {
     display: block;
-    margin: 1rem 1.5rem;
+    margin: 0rem 1.5rem;
     text-align: center;
   }
 

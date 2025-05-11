@@ -10,7 +10,7 @@
       rgba(0, 0, 142, 0.7),
       rgba(1, 114, 128, 0.7)
     ),
-    url("/img/Products/PageHeader.png") center/cover no-repeat;
+    url("../img/Products/PageHeader.png") center/cover no-repeat;
   z-index: 1;
 }
 /* Shared Header*/
@@ -131,7 +131,7 @@ section hr {
 
 .Category-Item {
   width: 250px;
-  height: 250px;
+  min-height: 250px; /* Changed from height to min-height */
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -168,9 +168,15 @@ section hr {
 .Category-Item p {
   color: #19456b;
   font-size: 0.9rem;
-  padding: 20px;
+  padding: 10px; /* Reduced padding */
   transition: background-color 0.3s, color 0.3s;
   word-break: break-word;
+  margin: 0; /* Remove default margins */
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
 }
 
 .Category-Item:hover p {
@@ -183,7 +189,7 @@ section hr {
 @media (max-width: 780px) {
   .Category-Item {
     width: 200px;
-    height: 200px;
+    min-height: 200px; /* Changed from height to min-height */
   }
   .Category-Container {
     grid-template-columns: repeat(2, 1fr);
@@ -196,29 +202,38 @@ section hr {
   section {
     width: 100%; /* Make space for the mobile nav */
   }
+
+  .Category-Item p {
+    font-size: 0.8rem;
+    padding: 8px;
+    -webkit-line-clamp: 2; /* Limit to 2 lines on smaller screens */
+  }
 }
 @media (max-width: 400px) {
   .Category-Container {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    gap: 10px;
+    padding: 10px;
   }
 
   .Category-Item {
     width: 150px;
-    height: 150px;
+    min-height: 150px; /* Changed from height to min-height */
   }
   .Category-Item p {
-    height: auto;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
+    -webkit-line-clamp: 3; /* Limit to 2 lines on smallest screens */
   }
 
   .Category-Item img {
-    width: 100%;
+    width: 80%;
     height: 60%;
   }
 
   section h3 {
     font-size: 1rem;
+    margin-left: 10px;
   }
 }
 /* Category Active */

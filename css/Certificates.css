@@ -10,7 +10,7 @@
       rgba(0, 0, 142, 0.7),
       rgba(1, 114, 128, 0.7)
     ),
-    url("/img/Certificates/Certifcate\ Header.png") center/cover no-repeat;
+    url("../img/Certificates/Certifcate\ Header.png") center/cover no-repeat;
   z-index: 1;
 }
 /* Shared Header*/
@@ -61,15 +61,14 @@
 
 .certificate-card {
   width: 100%;
-  max-width: 800px; /* Reduced from 900px for better mobile display */
+  max-width: 630px; /* Reduced from 900px for better mobile display */
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   transition-delay: calc(var(--order) * 0.15s);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 3/5; /* Maintain 600x1000 proportion (3:5 ratio) */
+
+  /* aspect-ratio: 3/5;  */
 }
 
 .certificate-card.animate {
@@ -83,7 +82,9 @@
   display: block;
   object-fit: cover; /* Changed from contain to cover for better filling */
 }
-
+.section-Clients {
+  margin: 5vh 0px;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .certificates-section {
@@ -92,8 +93,7 @@
   }
 
   .certificate-card {
-    max-width: 95%;
-    aspect-ratio: 3/4; /* Slightly adjust ratio for mobile */
+    max-width: 100%;
   }
 }
 
