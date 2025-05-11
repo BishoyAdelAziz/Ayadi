@@ -92,6 +92,7 @@ img {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  height: auto;
 }
 @-webkit-keyframes fadeIn {
   0% {
@@ -1379,6 +1380,7 @@ input[type="number"] {
 .page_card-title {
   line-height: 1.3;
   color: #fff;
+  font-size: clamp(20px, 5vw, 40px);
 }
 @media screen and (min-width: 575.98px) {
   .page {

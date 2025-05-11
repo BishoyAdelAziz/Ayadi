@@ -39,27 +39,18 @@
 }
 
 .Founder-Quote p:nth-child(odd) {
-  font-weight: 700;
-  color: #000;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .Founder-Quote p:nth-child(even) {
   font-weight: 400;
-  color: #00008e;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 /* Special classes for first two paragraphs */
-.Founder-Quote-first {
-  font-size: 1.3rem !important;
-}
-
-.About-Quote-second {
-  color: #00008e !important;
-}
 
 /* Responsive Design */
 @media screen and (max-width: 992px) {
@@ -108,8 +99,8 @@
   margin: 10vh auto;
 }
 .Brand-History-Container p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
   font-weight: 600;
   margin-top: 5vh;
 }
