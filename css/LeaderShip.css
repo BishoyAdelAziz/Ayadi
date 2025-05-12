@@ -35,7 +35,7 @@
 
 .team-card {
   perspective: 1000px;
-  height: 300px;
+  height: 350px;
 }
 
 .card-inner {
@@ -46,6 +46,7 @@
   transform-style: preserve-3d;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .team-card.visible .card-inner {
@@ -74,7 +75,7 @@
 }
 .card-image {
   width: 100%;
-  height: 90%;
+  height: 80%;
   overflow: hidden;
   display: flex;
   align-items: flex-start; /* Changed from center to flex-start to align to top */
@@ -89,12 +90,15 @@
 }
 
 .card-content {
-  height: 30%; /* Remaining 30% for content */
+  height: 20%; /* Fixed 30% for content */
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  padding: 0 10px;
+  align-items: flex-start;
+  background: white;
 }
 
 .member-name {
@@ -137,7 +141,6 @@
 
 .animated-paragraph {
   font-size: clamp(1rem, 2.5vw, 1.2rem); /* Fluid paragraph */
-  font-weight: 300;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -153,8 +156,7 @@
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
   .team-card {
-    perspective: 1000px;
-    height: 350px;
+    height: 400px; /* Slightly taller on mobile */
   }
   .Section-title {
     flex-direction: row; /* Keep horizontal layout on mobile */
@@ -163,6 +165,12 @@
 
   .animated-paragraph {
     margin-left: clamp(15px, 3vw, 25px); /* Adjusted for icon */
+  }
+  .card-image {
+    height: 75%; /* More space for image on mobile */
+  }
+  .card-content {
+    height: 25%;
   }
 }
 

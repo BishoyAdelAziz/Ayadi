@@ -75,7 +75,7 @@
 .post {
   width: 80%;
   max-width: 800px;
-  margin: 10vh auto;
+  margin: 5vh auto;
   background-color: #fff;
   padding: 2rem 2.5rem;
   border-radius: 12px;
@@ -142,7 +142,6 @@
   line-height: 1.6;
   color: #333;
   margin: 0;
-  font-weight: 700;
 }
 
 /* Animations */
@@ -187,7 +186,7 @@
   }
 
   .post-header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
   }
@@ -622,6 +621,8 @@
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.5s ease 0.3s;
+  display: none;
+  /* QOUTE IMAGE VISABLITY */
 }
 
 .quote-image img.animated {

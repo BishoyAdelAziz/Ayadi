@@ -16,7 +16,16 @@
   width: 70%;
   margin: 10vh auto;
 }
-
+.Founder-Image-Container {
+  width: 100%;
+  margin: 0 auto;
+}
+.Founder-Image-Container img {
+  width: 100%;
+  margin: 0 auto;
+  object-position: center center;
+  height: 500px;
+}
 .Founder-Quote {
   display: flex;
   flex-direction: column;
@@ -58,6 +67,10 @@
 }
 
 @media screen and (max-width: 575.98px) {
+  .Founder-Image-Container img {
+    width: 80%;
+    height: 200px;
+  }
   .Founder-Sppech-Container {
     width: 90%;
   }
@@ -73,7 +86,6 @@
 .Brand-History-Container p {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 500;
   margin-top: 5vh;
 }
 h3 {
