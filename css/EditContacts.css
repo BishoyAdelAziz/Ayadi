@@ -14,3 +14,29 @@
   z-index: 1;
 }
 /* Shared Header*/
+
+.success-message,
+.error-message {
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+.success-message {
+  background-color: #e6ffed;
+  color: #2e7d32;
+}
+.error-message {
+  background-color: #ffe6e6;
+  color: #c62828;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

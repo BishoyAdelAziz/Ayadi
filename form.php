@@ -1,27 +1,38 @@
-<?php if(isset($_POST["feedbackName"]))
-{
-	// Read the form values
-	$success = false;
-	$name = isset( $_POST['feedbackName'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['feedbackName'] ) : "";
-	$senderEmail = isset( $_POST['feedbackEmail'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['feedbackEmail'] ) : "";
-	$senderTel = isset( $_POST['feedbackTel'] ) ? preg_replace( "/[^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$]/", "", $_POST['feedbackTel'] ) : "";
-	$subject = isset( $_POST['contactsSubject'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['contactsSubject'] ) : "";
-	$message = isset( $_POST['feedbackMessage'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['feedbackMessage'] ) : "";
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["feedbackName"])) {
+    // Sanitize inputs
+    $name = isset($_POST['feedbackName']) ? preg_replace("/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['feedbackName']) : "";
+    $senderEmail = isset($_POST['feedbackEmail']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['feedbackEmail']) : "";
+    $senderTel = isset($_POST['feedbackTel']) ? preg_replace("/[^\d\+\-\s]/", "", $_POST['feedbackTel']) : "";
+    $subjectInput = isset($_POST['contactsSubject']) ? preg_replace("/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['contactsSubject']) : "";
+    $messageContent = isset($_POST['feedbackMessage']) ? preg_replace("/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['feedbackMessage']) : "";
 
-	//Headers
-	$to = "info@evkayadi.com";
-    $subject = 'Contact Us';
-	$headers = "MIME-Version: 1.0\r\n";
-	$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+    // Email settings
+    $to = "info@evkayadi.com";
+    $subject = "Contact Us";
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+    $headers .= "From: $senderEmail\r\n";
 
-//body message
-	$message = "Name: ". $name . "<br>Subject: ". $subject . "<br>Email: ". $senderEmail . "<br>Phone: ". $senderTel . "<br> Message: " . $message . "";
+    // Email body
+    $message = "
+        <strong>Name:</strong> $name<br>
+        <strong>Subject:</strong> $subjectInput<br>
+        <strong>Email:</strong> $senderEmail<br>
+        <strong>Phone:</strong> $senderTel<br>
+        <strong>Message:</strong><br>$messageContent
+    ";
 
-	//Email Send Function
+    // Send mail
     $send_email = mail($to, $subject, $message, $headers);
-}
-else
-{
-	echo '<div class="failed">Failed: Email not Sent.</div>';
+
+    // Response
+    if ($send_email) {
+        echo '<div class="success-message">✅ Thank you! Your Feedback has been sent.</div>';
+    } else {
+        echo '<div class="error-message">❌ Error: Your message could not be sent.</div>';
+    }
+} else {
+    echo '<div class="error-message">⚠️ Form not submitted properly.</div>';
 }
 ?>
