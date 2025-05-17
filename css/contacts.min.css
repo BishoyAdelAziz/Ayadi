@@ -519,6 +519,10 @@ h6 {
 .contact_data-item .main {
   padding: 25px;
 }
+.contact_data-item:hover .media {
+  background-color: #b62348;
+}
+
 .contact_data-item .main_info {
   display: -webkit-box;
   display: -ms-flexbox;

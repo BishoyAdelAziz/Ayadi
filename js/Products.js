@@ -63,3 +63,50 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(item);
   });
 });
+// hovering Logic
+document.addEventListener("DOMContentLoaded", function () {
+  const imageWrappers = document.querySelectorAll(".image-wrapper");
+  let currentIndex = 0;
+  let hoverInterval;
+
+  function simulateHover() {
+    imageWrappers.forEach((wrapper) => {
+      wrapper.classList.remove("auto-hover");
+    });
+
+    imageWrappers[currentIndex].classList.add("auto-hover");
+    currentIndex = (currentIndex + 1) % imageWrappers.length;
+  }
+
+  function startHoverInterval() {
+    hoverInterval = setInterval(simulateHover, 3000);
+  }
+
+  startHoverInterval();
+
+  imageWrappers.forEach((wrapper) => {
+    wrapper.addEventListener("mouseenter", () => {
+      clearInterval(hoverInterval);
+      imageWrappers.forEach((w) => w.classList.remove("auto-hover"));
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+      startHoverInterval();
+    });
+  });
+
+  const style = document.createElement("style");
+  style.textContent = `
+      .image-wrapper.auto-hover .info-box {
+        opacity: 1;
+        visibility: visible;
+        top: 110%;
+      }
+
+      .image-wrapper.auto-hover img {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+    `;
+  document.head.appendChild(style);
+});

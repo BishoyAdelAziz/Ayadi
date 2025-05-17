@@ -241,3 +241,113 @@ section hr {
   color: #ad2142;
   font-weight: bold;
 }
+/* Hovering Section  */
+.Hovering-Section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 5vh auto;
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap on small screens */
+  gap: 10px;
+  height: auto;
+  padding: 10px 5px;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  position: relative;
+  flex: 1 1 150px;
+  min-width: 100px;
+  max-width: 200px;
+  margin-bottom: 100px;
+}
+
+.Hovering-Section img {
+  width: 60%;
+  margin: 0 auto;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: block;
+}
+
+/* Info Box Styling */
+.info-box {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 180px;
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  font-size: 0.75em;
+  z-index: 9000;
+  white-space: normal;
+  overflow: visible;
+  display: block;
+}
+
+.info-box .Info-Title {
+  font-size: 1rem;
+  color: #19456b;
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.info-box p:not(.Info-Title) {
+  margin: 0;
+  display: block;
+  line-height: 1.4;
+}
+
+.image-wrapper:hover .info-box {
+  opacity: 1;
+  visibility: visible;
+  top: 110%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-wrapper {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin-bottom: 60px;
+  }
+
+  .Hovering-Section img {
+    width: 80%;
+  }
+
+  .info-box {
+    max-width: 160px;
+    font-size: 0.7rem;
+  }
+
+  .info-box .Info-Title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-wrapper {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .Hovering-Section img {
+    width: 40%;
+  }
+}
