@@ -351,3 +351,21 @@ section hr {
     width: 40%;
   }
 }
+/* Add this to your existing CSS */
+.product-link {
+  display: contents; /* Makes the anchor tag invisible to layout */
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits text color from parent */
+}
+
+/* Optional: If you need to maintain the hover effects */
+.product-link:hover .Category-Item {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-link:hover .Category-Item p {
+  background-color: #ad2142;
+  color: white;
+  border-radius: 5px;
+}
