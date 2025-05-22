@@ -256,7 +256,6 @@ section hr {
   gap: 10px;
   height: auto;
   padding: 10px 5px;
-  overflow: hidden;
 }
 
 .image-wrapper {
@@ -311,6 +310,7 @@ section hr {
   margin: 0;
   display: block;
   line-height: 1.4;
+  text-align: start;
 }
 
 .image-wrapper:hover .info-box {
