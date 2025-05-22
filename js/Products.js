@@ -63,50 +63,124 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(item);
   });
 });
-// hovering Logic
+// Auto Hovering Sections
 document.addEventListener("DOMContentLoaded", function () {
-  const imageWrappers = document.querySelectorAll(".image-wrapper");
-  let currentIndex = 0;
-  let hoverInterval;
+  // AutoHover Controller Class
+  class AutoHover {
+    constructor(selector) {
+      this.elements = document.querySelectorAll(selector);
+      this.currentIndex = 0;
+      this.interval = null;
+      if (this.elements.length > 0) {
+        this.init();
+      }
+    }
 
-  function simulateHover() {
-    imageWrappers.forEach((wrapper) => {
-      wrapper.classList.remove("auto-hover");
-    });
+    init() {
+      this.startInterval();
 
-    imageWrappers[currentIndex].classList.add("auto-hover");
-    currentIndex = (currentIndex + 1) % imageWrappers.length;
+      this.elements.forEach((el) => {
+        el.addEventListener("mouseenter", this.handleMouseEnter.bind(this));
+        el.addEventListener("mouseleave", this.handleMouseLeave.bind(this));
+      });
+    }
+
+    handleMouseEnter(e) {
+      this.stopInterval();
+      this.clearAllHovers();
+      e.currentTarget.classList.add("active-hover");
+    }
+
+    handleMouseLeave(e) {
+      this.startInterval();
+      e.currentTarget.classList.remove("active-hover");
+    }
+
+    startInterval() {
+      this.stopInterval();
+      this.interval = setInterval(() => {
+        this.clearAllHovers();
+        this.elements[this.currentIndex].classList.add("auto-hover");
+        this.currentIndex = (this.currentIndex + 1) % this.elements.length;
+      }, 3000);
+    }
+
+    stopInterval() {
+      if (this.interval) {
+        clearInterval(this.interval);
+        this.interval = null;
+      }
+    }
+
+    clearAllHovers() {
+      this.elements.forEach((el) => {
+        el.classList.remove("auto-hover");
+      });
+    }
   }
 
-  function startHoverInterval() {
-    hoverInterval = setInterval(simulateHover, 3000);
-  }
+  // Initialize all hover sections
+  const hoverSections = [
+    new AutoHover(".image-wrapper"), // First product section
+    new AutoHover(".second-Hovering > div"), // Main items (Bolts)
+    new AutoHover(".Component > div"), // Component parts (top/gasket/buttom)
+  ];
 
-  startHoverInterval();
-
-  imageWrappers.forEach((wrapper) => {
-    wrapper.addEventListener("mouseenter", () => {
-      clearInterval(hoverInterval);
-      imageWrappers.forEach((w) => w.classList.remove("auto-hover"));
-    });
-
-    wrapper.addEventListener("mouseleave", () => {
-      startHoverInterval();
-    });
-  });
-
+  // Add dynamic styles
   const style = document.createElement("style");
   style.textContent = `
-      .image-wrapper.auto-hover .info-box {
-        opacity: 1;
-        visibility: visible;
-        top: 110%;
-      }
-
-      .image-wrapper.auto-hover img {
-        transform: scale(1.05);
-        opacity: 1;
-      }
-    `;
+    /* Base hover effects */
+    .auto-hover .info-box:not(.gasket .info-box),
+    .active-hover .info-box:not(.gasket .info-box) {
+      opacity: 1 !important;
+      visibility: visible !important;
+      top: 110% !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+    
+    /* Gasket-specific positioning */
+    .gasket.auto-hover .info-box,
+    .gasket.active-hover .info-box {
+      opacity: 1 !important;
+      visibility: visible !important;
+      left: -110% !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+    }
+    
+    .gasket .info-box::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 10px 0 10px 10px;
+      border-style: solid;
+      border-color: transparent transparent transparent #fff;
+    }
+    
+    /* Image scaling */
+    .auto-hover img,
+    .active-hover img {
+      transform: scale(1.05) !important;
+    }
+    
+    /* Component animations */
+    .Component .auto-hover.top,
+    .Component .active-hover.top {
+      transform: translateY(-8px) !important;
+    }
+    
+    .Component .auto-hover.gasket,
+    .Component .active-hover.gasket {
+      transform: translateY(-4px) !important;
+    }
+    
+    .Component .auto-hover.buttom,
+    .Component .active-hover.buttom {
+      transform: translateY(-8px) !important;
+    }
+  `;
   document.head.appendChild(style);
 });
