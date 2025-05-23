@@ -112,26 +112,6 @@ p {
   gap: 2vh;
 }
 
-.main-text {
-  font-size: 1rem;
-  margin: 0;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.animate-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.main-text.animate,
-.animate-text.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .Global-Reach {
@@ -147,20 +127,47 @@ p {
   }
 }
 
-/* Animation delays */
-.main-text.animate {
-  transition-delay: 0.2s;
+/* Flags Container*/
+.Flags-Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul {
+  list-style-type: disc;
+  list-style-position: inside; /* Ensures bullets are visible */
+  padding-left: 1em; /* Proper indentation */
 }
 
-.animate-text:nth-of-type(1).animate {
-  transition-delay: 0.4s;
+ul li {
+  margin-bottom: 0.5em; /* Space between items */
+  text-transform: capitalize;
 }
-
-.animate-text:nth-of-type(2).animate {
-  transition-delay: 0.6s;
+li .highlighted {
+  color: #b62348;
+  font-weight: 400;
 }
-.Global-Reach-Image .responsive-svg {
-  width: 100%;
-  height: auto;
-  display: block;
+.Flags {
+  width: 40%;
+  margin: 0;
+}
+.Flags img {
+  margin-top: 2vh;
+}
+@media screen and (max-width: 768px) {
+  .Flags-Container {
+    flex-direction: column;
+    gap: 5vh;
+  }
+  .Flags {
+    width: 90%;
+  }
+  .Flags img {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2vh;
+  }
+  .Flags p {
+    font-size: 0.8rem;
+  }
 }
