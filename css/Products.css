@@ -494,3 +494,23 @@ section hr {
   color: white;
   border-radius: 5px;
 }
+/* Add to your CSS */
+/* Initially hide all hover sections */
+/* Initially hide all hover text */
+.hover-text.hidden {
+  display: none;
+}
+
+/* Show text when section is active */
+.hover-section.active .hover-text {
+  display: block;
+}
+
+/* Keep your existing hover section styles */
+.hover-section {
+  display: none;
+}
+
+.hover-section.active {
+  display: block;
+}

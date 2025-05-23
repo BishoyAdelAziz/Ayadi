@@ -2,13 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryLinks = document.querySelectorAll(".category-link");
   const products = document.querySelectorAll(".Category-Item");
   const sectionTitle = document.querySelector("section > h3"); // Select the h3 inside section
+  const hoverText = document.querySelector(".hover-text"); // Get the hover text element
 
   function showProductsByCategory(category) {
+    const allHoverSections = document.querySelectorAll(".hover-section");
+    const HoverTitle = document.querySelectorAll(".hover-text");
+    allHoverSections.forEach((section) => {
+      section.classList.remove("active");
+    });
     if (category === "all") {
       products.forEach((product) => {
         product.style.display = "flex";
       });
       sectionTitle.textContent = "All Products"; // Update section title
+      hoverText.classList.add("hidden");
     } else {
       products.forEach((product) => {
         const productCategory = product.getAttribute("data-category");
@@ -19,6 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
       sectionTitle.textContent = category; // Update section title with selected category
+    }
+    if (category === "PP Compression Fittings PN16") {
+      document
+        .getElementById("compression-hover-section")
+        .classList.add("active");
+      hoverText.classList.remove("hidden");
+    } else if (category === "PP Clamp Saddle") {
+      document
+        .getElementById("clamp-saddle-hover-section")
+        .classList.add("active");
+      hoverText.classList.remove("hidden");
     }
   }
 
