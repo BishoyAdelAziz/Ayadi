@@ -131,7 +131,7 @@
 }
 
 .specs-table tr:nth-child(even) td {
-  background-color: #1a97c8;
+  background-color: #47b2e4;
   color: white;
 }
 
@@ -273,7 +273,7 @@
 }
 
 .inquiry-form input[type="submit"] {
-  background-color: #1a97c8;
+  background-color: #47b2e4;
   color: white;
   border: none;
   padding: 12px 25px;
