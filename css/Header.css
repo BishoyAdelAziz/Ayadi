@@ -6,7 +6,12 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #1a97c8;
+  background: #47b2e4;
+  background: linear-gradient(
+    90deg,
+    rgba(71, 178, 228, 1) 27%,
+    rgba(137, 207, 240, 1) 100%
+  );
   z-index: 9999;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -247,7 +252,12 @@
 .Global-Footer {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right, #1a97c8, #80cccc);
+  background: #47b2e4;
+  background: linear-gradient(
+    90deg,
+    rgba(71, 178, 228, 1) 27%,
+    rgba(137, 207, 240, 1) 100%
+  );
   color: white;
   padding: 2rem 0;
 }
