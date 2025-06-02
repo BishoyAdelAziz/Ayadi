@@ -398,22 +398,15 @@
   display: flex;
   align-items: center;
   width: max-content; /* Allow track to expand beyond container */
-  animation: scroll 10s linear infinite;
+  animation: scroll 25s linear infinite;
   margin-bottom: 20px; /* Add space between the two tracks */
 }
 
-.logo-track-reverse {
-  padding-top: 7vh;
-  animation: scroll-reverse 10s linear infinite;
-}
-
-.logo-track:hover,
-.logo-track-reverse:hover {
+.logo-track:hover {
   animation-play-state: paused;
 }
 
-.logo-track img,
-.logo-track-reverse img {
+.logo-track img {
   height: 60px;
   width: auto;
   margin: 0 30px;
@@ -421,8 +414,7 @@
   transition: all 0.3s ease;
 }
 
-.logo-track img:hover,
-.logo-track-reverse img:hover {
+.logo-track img:hover {
   opacity: 1;
   transform: scale(1.1);
 }
