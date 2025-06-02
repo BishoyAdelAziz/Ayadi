@@ -4,12 +4,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionTitle = document.querySelector("section > h3"); // Select the h3 inside section
   const hoverText = document.querySelector(".hover-text"); // Get the hover text element
 
+  // Function to handle hash changes and category filtering
+  function handleHashChange() {
+    const hash = window.location.hash.substring(1);
+    if (!hash) return;
+
+    // Map URL hashes to data-category values
+    const categoryMap = {
+      all: "all",
+      "PP-Compression-Fittings-PN16": "PP Compression Fittings PN16",
+      "PP-Clamp-Saddle": "PP Clamp Saddle",
+      "PP-Barbed-Fittings-Valves": "PP Barbed Fittings & Valves",
+      "PP-Coated-Steel-Flange": "PP Coated Steel Flange",
+      "HDPE-Butt-Fusion-Fittings": "HDPE Butt Fusion Fittings",
+    };
+
+    const category = categoryMap[hash] || "all";
+
+    // Find and click the corresponding category link
+    const targetLink = document.querySelector(
+      `.category-link[data-category="${category}"]`
+    );
+    if (targetLink) {
+      setActiveLink(targetLink);
+      showProductsByCategory(category);
+    }
+  }
+
+  // Initial hash check on page load
+  handleHashChange();
+
+  // Listen for hash changes
+  window.addEventListener("hashchange", handleHashChange);
+
   function showProductsByCategory(category) {
     const allHoverSections = document.querySelectorAll(".hover-section");
     const HoverTitle = document.querySelectorAll(".hover-text");
     allHoverSections.forEach((section) => {
       section.classList.remove("active");
     });
+
     if (category === "all") {
       products.forEach((product) => {
         product.style.display = "flex";
@@ -27,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       sectionTitle.textContent = category; // Update section title with selected category
     }
+
     if (category === "PP Compression Fittings PN16") {
       document
         .getElementById("compression-hover-section")
@@ -53,14 +88,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const selectedCategory = link.getAttribute("data-category");
       setActiveLink(link);
       showProductsByCategory(selectedCategory);
+
+      // Update URL hash without page reload
+      const categoryHash = selectedCategory
+        .toLowerCase()
+        .replace(/ /g, "-")
+        .replace(/&/g, "-");
+      history.pushState(null, null, `#${categoryHash}`);
     });
   });
 
-  // Show all products on initial load
-  showProductsByCategory("all");
+  // Show all products on initial load if no hash is present
+  if (!window.location.hash) {
+    showProductsByCategory("all");
+  }
 });
 
-// Animation
+// Animation - Keep existing intersection observer code
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".Category-Item");
 
@@ -81,9 +125,9 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(item);
   });
 });
-// Auto Hovering Sections
+
+// Auto Hovering Sections - Keep existing auto hover functionality
 document.addEventListener("DOMContentLoaded", function () {
-  // AutoHover Controller Class
   class AutoHover {
     constructor(selector) {
       this.elements = document.querySelectorAll(selector);
