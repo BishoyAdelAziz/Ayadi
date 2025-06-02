@@ -130,7 +130,7 @@ section hr {
 }
 
 .Category-Item {
-  width: 250px;
+  width: 200px;
   min-height: 200px;
   background: #fff;
   border: 1px solid #ddd;
@@ -156,7 +156,7 @@ section hr {
 }
 
 .Category-Item img {
-  width: 70%;
+  width: 50%;
   height: 60%;
   object-fit: contain;
   margin: 0 auto 8px;
@@ -175,7 +175,8 @@ section hr {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  line-clamp: 3; /* Limit to 3 lines */
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .Category-Item:hover p {
@@ -203,9 +204,9 @@ section hr {
   }
 
   .Category-Item p {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     padding: 6px;
-    text-align: center;
+    -webkit-line-clamp: 2;
   }
 }
 @media (max-width: 400px) {
@@ -221,7 +222,8 @@ section hr {
     min-height: 130px;
   }
   .Category-Item p {
-    font-size: 0.4rem;
+    font-size: 0.65rem;
+    -webkit-line-clamp: 2;
   }
 
   .Category-Item img {
