@@ -14,7 +14,7 @@ p {
       rgba(0, 0, 142, 0.6),
       rgba(1, 114, 128, 0.6)
     ),
-    url("../img/FactoryCalture/Calture.webp") center/cover no-repeat;
+    url("../img/factory\ calture\ header.webp") center/cover no-repeat;
   z-index: 1;
 }
 
@@ -90,84 +90,3 @@ p {
   transition-delay: 0.5s;
 }
 /* Global Reach */
-.Global-Reach {
-  width: 70%;
-  margin: 5vh auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-  padding: 20px 0;
-}
-
-.Global-Title {
-  font-weight: bold;
-  font-size: 38px;
-}
-
-.Global-Reach-Content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 2vh;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .Global-Reach {
-    width: 90%;
-  }
-
-  .main-text {
-    font-size: 1.1rem;
-  }
-
-  .Global-Reach-Content p {
-    font-size: 1rem;
-  }
-}
-
-/* Flags Container*/
-.Flags-Container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-ul {
-  list-style-type: disc;
-  list-style-position: inside; /* Ensures bullets are visible */
-  padding-left: 1em; /* Proper indentation */
-}
-
-ul li {
-  margin-bottom: 0.5em; /* Space between items */
-  text-transform: capitalize;
-}
-li .highlighted {
-  color: #b62348;
-  font-weight: 400;
-}
-.Flags {
-  width: 40%;
-  margin: 0;
-}
-.Flags img {
-  margin-top: 2vh;
-}
-@media screen and (max-width: 768px) {
-  .Flags-Container {
-    flex-direction: column;
-    gap: 5vh;
-  }
-  .Flags {
-    width: 90%;
-  }
-  .Flags img {
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 2vh;
-  }
-  .Flags p {
-    font-size: 0.8rem;
-  }
-}
