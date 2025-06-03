@@ -90,6 +90,10 @@ li .highlighted {
   padding: 6px;
   transition: transform 0.3s ease;
 }
+.Flags-Container img:hover {
+  transform: scale(1.9);
+  background-color: whitesmoke;
+}
 @media screen and (max-width: 600px) {
   .Flags-Container img {
     width: 50px; /* Adjust size for smaller screens */
