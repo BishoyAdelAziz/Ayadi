@@ -45,12 +45,18 @@
   font-weight: 900;
   margin-bottom: 10vh;
 }
+.slide-text p {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 5vh;
+  font-size: 1.2rem; /* Adjust as needed */
+}
 .swiper-slide-active .slide-text {
   opacity: 1;
   transform: translateY(-50%) translateX(0); /* Animate in from the left */
 }
 
-@media (max-width: 400px) {
+@media (max-width: 720px) {
   .swiper-slide-active .slide-text {
     transform: translateY(-40%) translateX(0); /* Animate in from the left */
   }
@@ -58,6 +64,12 @@
   .slide-text {
     margin: 10vh 3vw;
     font-size: 0.7rem;
+  }
+  .slide-text h3 {
+    font-size: 1.2rem; /* Adjust for smaller screens */
+  }
+  .slide-text p {
+    font-size: 0.8rem; /* Adjust for smaller screens */
   }
 }
 /* Gradient overlay */
