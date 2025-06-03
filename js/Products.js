@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const categoryLinks = document.querySelectorAll(".category-link");
   const products = document.querySelectorAll(".Category-Item");
-  const sectionTitle = document.querySelector("section > h3"); // Select the h3 inside section
-  const hoverText = document.querySelector(".hover-text"); // Get the hover text element
+  const sectionTitle = document.querySelector("section > h3");
+  const hoverText = document.querySelector(".hover-text");
 
   // Function to handle hash changes and category filtering
   function handleHashChange() {
@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const category = categoryMap[hash] || "all";
 
-    // Find and click the corresponding category link
-    const targetLink = document.querySelector(
-      `.category-link[data-category="${category}"]`
-    );
-    if (targetLink) {
-      setActiveLink(targetLink);
-      showProductsByCategory(category);
-    }
+    // Update all matching category links (desktop and mobile)
+    document
+      .querySelectorAll(`.category-link[data-category="${category}"]`)
+      .forEach((link) => {
+        setActiveLink(link);
+      });
+
+    showProductsByCategory(category);
   }
 
   // Initial hash check on page load
@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showProductsByCategory(category) {
     const allHoverSections = document.querySelectorAll(".hover-section");
-    const HoverTitle = document.querySelectorAll(".hover-text");
     allHoverSections.forEach((section) => {
       section.classList.remove("active");
     });
@@ -48,30 +47,29 @@ document.addEventListener("DOMContentLoaded", () => {
       products.forEach((product) => {
         product.style.display = "flex";
       });
-      sectionTitle.textContent = "All Products"; // Update section title
+      sectionTitle.textContent = "All Products";
       hoverText.classList.add("hidden");
     } else {
       products.forEach((product) => {
         const productCategory = product.getAttribute("data-category");
-        if (productCategory === category) {
-          product.style.display = "flex";
-        } else {
-          product.style.display = "none";
-        }
+        product.style.display = productCategory === category ? "flex" : "none";
       });
-      sectionTitle.textContent = category; // Update section title with selected category
-    }
+      sectionTitle.textContent = category;
 
-    if (category === "PP Compression Fittings PN16") {
-      document
-        .getElementById("compression-hover-section")
-        .classList.add("active");
+      // Show hover text for all categories except "all"
       hoverText.classList.remove("hidden");
-    } else if (category === "PP Clamp Saddle") {
-      document
-        .getElementById("clamp-saddle-hover-section")
-        .classList.add("active");
-      hoverText.classList.remove("hidden");
+
+      // Activate hover section based on category
+      if (category === "PP Compression Fittings PN16") {
+        document
+          .getElementById("compression-hover-section")
+          .classList.add("active");
+      } else if (category === "PP Clamp Saddle") {
+        document
+          .getElementById("clamp-saddle-hover-section")
+          .classList.add("active");
+      }
+      // Add more conditions for other categories if they have hover sections
     }
   }
 
@@ -82,14 +80,22 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedLink.classList.add("active");
   }
 
-  categoryLinks.forEach((link) => {
+  // Handle clicks on category links
+  document.querySelectorAll(".category-link").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const selectedCategory = link.getAttribute("data-category");
-      setActiveLink(link);
+
+      // Update all matching category links
+      document
+        .querySelectorAll(`.category-link[data-category="${selectedCategory}"]`)
+        .forEach((l) => {
+          setActiveLink(l);
+        });
+
       showProductsByCategory(selectedCategory);
 
-      // Update URL hash without page reload
+      // Update URL hash
       const categoryHash = selectedCategory
         .toLowerCase()
         .replace(/ /g, "-")
@@ -104,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Animation - Keep existing intersection observer code
+// Animation for product items
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".Category-Item");
 
@@ -126,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Auto Hovering Sections - Keep existing auto hover functionality
+// Auto Hovering Sections
 document.addEventListener("DOMContentLoaded", function () {
   class AutoHover {
     constructor(selector) {
