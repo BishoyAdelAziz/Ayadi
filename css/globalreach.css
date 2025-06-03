@@ -1,0 +1,102 @@
+.Header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 142, 0.6),
+      rgba(1, 114, 128, 0.6)
+    ),
+    url("../img/global\ reach\ Header.webp") center/cover no-repeat;
+  z-index: 1;
+}
+.Global-Reach {
+  width: 70%;
+  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 20px 0;
+}
+.Global-Reach img {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+.Global-Title {
+  font-weight: bold;
+  font-size: 38px;
+}
+
+.Global-Reach-Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2vh;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .Global-Reach {
+    width: 90%;
+  }
+
+  .main-text {
+    font-size: 1.1rem;
+  }
+
+  .Global-Reach-Content p {
+    font-size: 1rem;
+  }
+}
+
+/* Flags Container*/
+.World-Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ul {
+  list-style-type: disc;
+  list-style-position: inside; /* Ensures bullets are visible */
+  padding-left: 1em; /* Proper indentation */
+}
+.Flags p {
+  font-weight: 600;
+  margin-bottom: 0.5em; /* Space between title and list */
+  color: #b62348;
+}
+ul li {
+  margin-bottom: 0.5em; /* Space between items */
+  text-transform: capitalize;
+}
+li .highlighted {
+  color: #b62348;
+  font-weight: 400;
+}
+
+.Flags-Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  margin: 2vh 0px;
+}
+.Flags-Container img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 6px;
+  transition: transform 0.3s ease;
+}
+@media screen and (max-width: 600px) {
+  .Flags-Container img {
+    width: 50px; /* Adjust size for smaller screens */
+    height: auto;
+  }
+  .World-Container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

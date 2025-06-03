@@ -71,11 +71,12 @@
   width: 100%;
   height: 500px;
   margin: 0 auto;
+  object-position: top center;
 }
 @media screen and (max-width: 575.98px) {
   .About-Ayadi-Container img {
     height: 200px;
-    object-position: center center;
+    object-position: top center;
   }
   .About-Ayadi-Container {
     width: 90%;
