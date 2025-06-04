@@ -18,7 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
+  document.querySelectorAll("#nav-links a:not(.dropbtn)").forEach((link) => {
+    link.addEventListener("click", function () {
+      if (window.innerWidth <= 768) {
+        navLinks.classList.remove("active");
+        // Also close any open dropdowns
+        document.querySelectorAll(".dropdown-content").forEach((dc) => {
+          dc.classList.remove("active");
+        });
+      }
+    });
+  });
   // Close menu when clicking outside (for mobile)
   document.addEventListener("click", function (e) {
     if (

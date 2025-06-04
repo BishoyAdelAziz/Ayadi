@@ -410,8 +410,8 @@
   display: flex;
   align-items: center;
   width: max-content; /* Allow track to expand beyond container */
-  animation: scroll 25s linear infinite;
-  margin-bottom: 20px; /* Add space between the two tracks */
+  animation: scroll 10s linear infinite;
+  padding: 2vh;
 }
 
 .logo-track:hover {
@@ -422,8 +422,8 @@
   height: 60px;
   width: auto;
   margin: 0 30px;
-  opacity: 0.7;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
+  user-select: none;
 }
 
 .logo-track img:hover {
@@ -468,14 +468,15 @@
   opacity: 0.5;
 }
 .section-Products {
+  width: 80%;
   padding: 10vh 0;
+  margin: 0 auto;
   background: #f9f9f9;
 }
 
 .Products-Content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2vw;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
