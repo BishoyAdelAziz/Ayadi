@@ -431,7 +431,7 @@
   display: flex;
   justify-content: center; /* Center icons horizontally */
   gap: 1.5rem; /* Space between icons */
-  margin-top: 0.5rem;
+  margin: 1rem;
 }
 
 .Icons-Container a {
@@ -455,4 +455,9 @@
 }
 .fourth-row {
   margin-bottom: -3vh;
+}
+@media screen and (max-width: 600px) {
+  .third-row p {
+    font-size: small;
+  }
 }
