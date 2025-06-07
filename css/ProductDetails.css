@@ -400,12 +400,12 @@
 }
 
 .Product-Name {
-  padding: 0.8rem;
-  text-align: center;
+  padding: 0.6rem;
+  text-align: start;
   font-weight: 500;
   color: #444;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.3;
   border-top: 1px solid #eee;
   flex-grow: 1;
