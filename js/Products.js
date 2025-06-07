@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         product.style.display = "flex";
       });
       sectionTitle.textContent = "All Products";
-      hoverText.classList.add("hidden");
     } else {
       products.forEach((product) => {
         const productCategory = product.getAttribute("data-category");
@@ -57,9 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionTitle.textContent = category;
 
       // Show hover text for all categories except "all"
-      hoverText.classList.remove("hidden");
 
       // Activate hover section based on category
+      if (
+        category === "PP Compression Fittings PN16" ||
+        category === "PP Clamp Saddle"
+      ) {
+        hoverText.classList.remove("hidden");
+      } else {
+        hoverText.classList.add("hidden");
+      }
       if (category === "PP Compression Fittings PN16") {
         document
           .getElementById("compression-hover-section")
