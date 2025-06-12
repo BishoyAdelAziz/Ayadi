@@ -564,7 +564,11 @@
   }
 
   .Product-Item {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .Product-Name {
+    font-size: 0.6rem;
   }
 }
 
