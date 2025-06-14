@@ -514,3 +514,28 @@ section hr {
 .hover-section.active {
   display: block;
 }
+/* Add this to your CSS */
+.empty-category-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: bold;
+  grid-column: 1 / -1; /* Span all columns */
+}
+
+@media (max-width: 768px) {
+  .empty-category-message {
+    height: 160px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .empty-category-message {
+    height: 130px;
+    font-size: 1rem;
+  }
+}
