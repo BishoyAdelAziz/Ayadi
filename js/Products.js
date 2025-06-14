@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const products = document.querySelectorAll(".Category-Item");
   const sectionTitle = document.querySelector("section > h3");
   const hoverText = document.querySelector(".hover-text");
+  const categoryContainer = document.querySelector(".Category-Container");
 
   // Function to handle hash changes and category filtering
   function handleHashChange() {
@@ -43,21 +44,41 @@ document.addEventListener("DOMContentLoaded", () => {
       section.classList.remove("active");
     });
 
+    // Remove any existing "COMING SOON" messages
+    const existingMessage = document.querySelector(".empty-category-message");
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
     if (category === "all") {
       products.forEach((product) => {
         product.style.display = "flex";
       });
       sectionTitle.textContent = "All Products";
     } else {
+      let hasProducts = false;
+
       products.forEach((product) => {
         const productCategory = product.getAttribute("data-category");
-        product.style.display = productCategory === category ? "flex" : "none";
+        if (productCategory === category) {
+          product.style.display = "flex";
+          hasProducts = true;
+        } else {
+          product.style.display = "none";
+        }
       });
+
       sectionTitle.textContent = category;
 
-      // Show hover text for all categories except "all"
+      // If no products in this category, show "COMING SOON" message
+      if (!hasProducts) {
+        const message = document.createElement("div");
+        message.className = "empty-category-message";
+        message.textContent = "COMING SOON";
+        categoryContainer.appendChild(message);
+      }
 
-      // Activate hover section based on category
+      // Show hover text for all categories except "all"
       if (
         category === "PP Compression Fittings PN16" ||
         category === "PP Clamp Saddle"
@@ -66,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         hoverText.classList.add("hidden");
       }
+
       if (category === "PP Compression Fittings PN16") {
         document
           .getElementById("compression-hover-section")
@@ -75,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
           .getElementById("clamp-saddle-hover-section")
           .classList.add("active");
       }
-      // Add more conditions for other categories if they have hover sections
     }
   }
 
@@ -114,10 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!window.location.hash) {
     showProductsByCategory("all");
   }
-});
 
-// Animation for product items
-document.addEventListener("DOMContentLoaded", function () {
+  // Animation for product items
   const items = document.querySelectorAll(".Category-Item");
 
   const observer = new IntersectionObserver(
