@@ -13,7 +13,7 @@
 }
 
 .swiper {
-  height: calc(50vh - 180px);
+  height: calc(50vh - 10vh);
   margin-top: -200px;
   position: relative; /* Add this for absolute positioning context */
 }
@@ -70,6 +70,9 @@
   }
   .slide-text p {
     font-size: 0.8rem; /* Adjust for smaller screens */
+  }
+  .swiper {
+    height: calc(10vh - 5vh); /* Adjust height for smaller screens */
   }
 }
 /* Gradient overlay */
@@ -847,4 +850,22 @@
 .btn:hover {
   background: #9e1f3e;
   transform: scale(1.05);
+}
+.slide-2 h3 {
+  margin-top: 40vh;
+  text-transform: capitalize;
+  width: 70%;
+}
+.slide-3 h3 {
+  margin-top: 30vh;
+  text-transform: capitalize;
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .slide-2 h3,
+  .slide-3 h3 {
+    margin-top: 0px;
+    width: 100%;
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
 }
